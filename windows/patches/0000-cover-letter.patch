@@ -1,0 +1,20 @@
+From 19b478096290909d0a9bfb81df4477c775d8e299 Mon Sep 17 00:00:00 2001
+From: Julia Suvorova <jusual@redhat.com>
+Date: Wed, 15 Jan 2020 18:15:16 +0100
+Subject: [PATCH 0/2] virtio-balloon: Reject qmp_balloon during hot-unplug
+
+Julia Suvorova (2):
+  qdev: Introduce qdev_get_bus_device
+  virtio-balloon: Reject qmp_balloon during hot-unplug
+
+ balloon.c                  |  5 ++++-
+ hw/core/qdev.c             | 11 +++++++++++
+ hw/virtio/virtio-balloon.c |  8 +++++++-
+ hw/virtio/virtio-pci.c     | 11 +++++++++--
+ include/hw/qdev-core.h     |  2 ++
+ include/sysemu/balloon.h   |  2 +-
+ 6 files changed, 34 insertions(+), 5 deletions(-)
+
+-- 
+2.24.1
+

@@ -1,0 +1,72 @@
+From 2125162ad3e0e8e7ce2c9701a01da99f70e0ed2e Mon Sep 17 00:00:00 2001
+From: Julia Suvorova <jusual@redhat.com>
+Date: Wed, 15 Jan 2020 15:31:34 +0100
+Subject: [PATCH 1/2] qdev: Introduce qdev_get_bus_device
+
+For bus devices, it is useful to be able to handle the parent device.
+
+Signed-off-by: Julia Suvorova <jusual@redhat.com>
+---
+ hw/core/qdev.c         | 11 +++++++++++
+ hw/virtio/virtio-pci.c | 11 +++++++++--
+ include/hw/qdev-core.h |  2 ++
+ 3 files changed, 22 insertions(+), 2 deletions(-)
+
+diff --git a/hw/core/qdev.c b/hw/core/qdev.c
+index 9f1753f5cf..ab9cd52fb2 100644
+--- a/hw/core/qdev.c
++++ b/hw/core/qdev.c
+@@ -296,6 +296,17 @@ HotplugHandler *qdev_get_hotplug_handler(DeviceState *dev)
+     return hotplug_ctrl;
+ }
+ 
++DeviceState *qdev_get_bus_device(void *opaque)
++{
++    DeviceState *dev = DEVICE(opaque);
++
++    if (dev->parent_bus) {
++        return dev->parent_bus->parent;
++    }
++
++    return NULL;
++}
++
+ static int qdev_reset_one(DeviceState *dev, void *opaque)
+ {
+     device_reset(dev);
+diff --git a/hw/virtio/virtio-pci.c b/hw/virtio/virtio-pci.c
+index f723b9f631..cebe880f53 100644
+--- a/hw/virtio/virtio-pci.c
++++ b/hw/virtio/virtio-pci.c
+@@ -1318,8 +1318,15 @@ static void virtio_pci_notify_write(void *opaque, hwaddr addr,
+                                     uint64_t val, unsigned size)
+ {
+     VirtIODevice *vdev = opaque;
+-    VirtIOPCIProxy *proxy = VIRTIO_PCI(DEVICE(vdev)->parent_bus->parent);
+-    unsigned queue = addr / virtio_pci_queue_mem_mult(proxy);
++    unsigned queue;
++    VirtIOPCIProxy *proxy = VIRTIO_PCI(qdev_get_bus_device(opaque));
++
++    if (!proxy) {
++        warn_report("Device %s doesn't have parent bus", vdev->name);
++        return;
++    }
++
++    queue = addr / virtio_pci_queue_mem_mult(proxy);
+ 
+     if (queue < VIRTIO_QUEUE_MAX) {
+         virtio_queue_notify(vdev, queue);
+diff --git a/include/hw/qdev-core.h b/include/hw/qdev-core.h
+index 1518495b1e..af08ed399f 100644
+--- a/include/hw/qdev-core.h
++++ b/include/hw/qdev-core.h
+@@ -481,4 +481,6 @@ void device_listener_unregister(DeviceListener *listener);
+  */
+ bool qdev_should_hide_device(QemuOpts *opts);
+ 
++DeviceState *qdev_get_bus_device(void *opaque);
++
+ #endif
+-- 
+2.24.1
+

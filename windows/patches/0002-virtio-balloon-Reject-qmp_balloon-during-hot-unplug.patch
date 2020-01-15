@@ -1,0 +1,75 @@
+From 19b478096290909d0a9bfb81df4477c775d8e299 Mon Sep 17 00:00:00 2001
+From: Julia Suvorova <jusual@redhat.com>
+Date: Tue, 14 Jan 2020 22:48:44 +0100
+Subject: [PATCH 2/2] virtio-balloon: Reject qmp_balloon during hot-unplug
+
+Hot-unplug takes some time due to communication with the guest.
+Do not change the device while freeing up resources.
+
+Signed-off-by: Julia Suvorova <jusual@redhat.com>
+---
+ balloon.c                  | 5 ++++-
+ hw/virtio/virtio-balloon.c | 8 +++++++-
+ include/sysemu/balloon.h   | 2 +-
+ 3 files changed, 12 insertions(+), 3 deletions(-)
+
+diff --git a/balloon.c b/balloon.c
+index f104b42961..fc1b070f3e 100644
+--- a/balloon.c
++++ b/balloon.c
+@@ -109,6 +109,8 @@ BalloonInfo *qmp_query_balloon(Error **errp)
+ 
+ void qmp_balloon(int64_t target, Error **errp)
+ {
++    Error *err = NULL;
++
+     if (!have_balloon(errp)) {
+         return;
+     }
+@@ -119,5 +121,6 @@ void qmp_balloon(int64_t target, Error **errp)
+     }
+ 
+     trace_balloon_event(balloon_opaque, target);
+-    balloon_event_fn(balloon_opaque, target);
++    balloon_event_fn(balloon_opaque, target, &err);
++    error_propagate(errp, err);
+ }
+diff --git a/hw/virtio/virtio-balloon.c b/hw/virtio/virtio-balloon.c
+index 57f3b9f22d..5e99b4eda9 100644
+--- a/hw/virtio/virtio-balloon.c
++++ b/hw/virtio/virtio-balloon.c
+@@ -717,11 +717,17 @@ static void virtio_balloon_stat(void *opaque, BalloonInfo *info)
+                                              VIRTIO_BALLOON_PFN_SHIFT);
+ }
+ 
+-static void virtio_balloon_to_target(void *opaque, ram_addr_t target)
++static void virtio_balloon_to_target(void *opaque, ram_addr_t target, Error **errp)
+ {
+     VirtIOBalloon *dev = VIRTIO_BALLOON(opaque);
+     VirtIODevice *vdev = VIRTIO_DEVICE(dev);
+     ram_addr_t vm_ram_size = get_current_ram_size();
++    DeviceState *bus_dev = qdev_get_bus_device(opaque);
++
++    if (bus_dev && bus_dev->pending_deleted_event) {
++        error_setg(errp, "Hot-unplug of %s is in progress", vdev->name);
++        return;
++    }
+ 
+     if (target > vm_ram_size) {
+         target = vm_ram_size;
+diff --git a/include/sysemu/balloon.h b/include/sysemu/balloon.h
+index aea0c44985..b3a09ca946 100644
+--- a/include/sysemu/balloon.h
++++ b/include/sysemu/balloon.h
+@@ -17,7 +17,7 @@
+ #include "exec/cpu-common.h"
+ #include "qapi/qapi-types-misc.h"
+ 
+-typedef void (QEMUBalloonEvent)(void *opaque, ram_addr_t target);
++typedef void (QEMUBalloonEvent)(void *opaque, ram_addr_t target, Error **errp);
+ typedef void (QEMUBalloonStatus)(void *opaque, BalloonInfo *info);
+ 
+ int qemu_add_balloon_handler(QEMUBalloonEvent *event_func,
+-- 
+2.24.1
+
