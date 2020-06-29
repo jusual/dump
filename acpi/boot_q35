@@ -1,0 +1,1241 @@
+[    0.000000] Linux version 5.6.19-200.fc31.x86_64+debug (mockbuild@bkernel01.iad2.fedoraproject.org) (gcc version 9.3.1 20200408 (Red Hat 9.3.1-2) (GCC)) #1 SMP Wed Jun 17 16:40:07 UTC 2020
+[    0.000000] Command line: BOOT_IMAGE=(hd0,msdos1)/boot/vmlinuz-5.6.19-200.fc31.x86_64+debug root=UUID=b1438b9b-2cab-4065-a99a-08a96687f73c ro no_timer_check net.ifnames=0 console=tty1 console=ttyS0,115200n8 pci_ports=native pci=check_enable_amd_mmconf,noacpi,bios,pcie_scan_all acpi.debug_level=0xffffffff acpi.debug_layer=0x00400004
+[    0.000000] x86/fpu: x87 FPU will use FXSAVE
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007ffdefff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007ffdf000-0x000000007fffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000b0000000-0x00000000bfffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed1c000-0x00000000fed1ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000027fffffff] usable
+[    0.000000] PCI: Unknown option `bios'
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.8 present.
+[    0.000000] DMI: QEMU Standard PC (Q35 + ICH9, 2009), BIOS rel-1.13.0-0-gf21b5a4aeb02-prebuilt.qemu.org 04/01/2014
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000000] kvm-clock: cpu 0, msr 1a6c01001, primary cpu clock
+[    0.000000] kvm-clock: using sched offset of 2028802964760 cycles
+[    0.000006] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000014] tsc: Detected 2112.006 MHz processor
+[    0.001533] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.001536] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.001540] last_pfn = 0x280000 max_arch_pfn = 0x400000000
+[    0.001569] MTRR default type: write-back
+[    0.001571] MTRR fixed ranges enabled:
+[    0.001572]   00000-9FFFF write-back
+[    0.001574]   A0000-BFFFF uncachable
+[    0.001575]   C0000-FFFFF write-protect
+[    0.001576] MTRR variable ranges enabled:
+[    0.001578]   0 base 00C0000000 mask FFC0000000 uncachable
+[    0.001579]   1 disabled
+[    0.001580]   2 disabled
+[    0.001582]   3 disabled
+[    0.001583]   4 disabled
+[    0.001584]   5 disabled
+[    0.001585]   6 disabled
+[    0.001586]   7 disabled
+[    0.001597] x86/PAT: PAT not supported by the CPU.
+[    0.001604] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+[    0.001612] last_pfn = 0x7ffdf max_arch_pfn = 0x400000000
+[    0.007935] found SMP MP-table at [mem 0x000f5aa0-0x000f5aaf]
+[    0.008036] check: Scanning 1 areas for low memory corruption
+[    0.008079] BRK [0x1a6e01000, 0x1a6e01fff] PGTABLE
+[    0.008083] BRK [0x1a6e02000, 0x1a6e02fff] PGTABLE
+[    0.008085] BRK [0x1a6e03000, 0x1a6e03fff] PGTABLE
+[    0.008119] BRK [0x1a6e04000, 0x1a6e04fff] PGTABLE
+[    0.008121] BRK [0x1a6e05000, 0x1a6e05fff] PGTABLE
+[    0.008257] BRK [0x1a6e06000, 0x1a6e06fff] PGTABLE
+[    0.008336] BRK [0x1a6e07000, 0x1a6e07fff] PGTABLE
+[    0.008775] RAMDISK: [mem 0x331d6000-0x358e2fff]
+[    0.008795] ACPI: Early table checksum verification disabled
+[    0.008810] ACPI: RSDP 0x00000000000F58B0 000014 (v00 BOCHS )
+[    0.008818] ACPI: RSDT 0x000000007FFE2FC6 000038 (v01 BOCHS  BXPCRSDT 00000001 BXPC 00000001)
+[    0.008833] ACPI: FACP 0x000000007FFE2DBE 0000F4 (v03 BOCHS  BXPCFACP 00000001 BXPC 00000001)
+[    0.008839] ACPI: DSDT 0x000000007FFE0040 002D7E (v01 BOCHS  BXPCDSDT 00000001 BXPC 00000001)
+[    0.008844] ACPI: FACS 0x000000007FFE0000 000040
+[    0.008848] ACPI: APIC 0x000000007FFE2EB2 000078 (v01 BOCHS  BXPCAPIC 00000001 BXPC 00000001)
+[    0.008853] ACPI: HPET 0x000000007FFE2F2A 000038 (v01 BOCHS  BXPCHPET 00000001 BXPC 00000001)
+[    0.008857] ACPI: MCFG 0x000000007FFE2F62 00003C (v01 BOCHS  BXPCMCFG 00000001 BXPC 00000001)
+[    0.008862] ACPI: WAET 0x000000007FFE2F9E 000028 (v01 BOCHS  BXPCWAET 00000001 BXPC 00000001)
+[    0.008872] ACPI: Local APIC address 0xfee00000
+[    0.009149] No NUMA configuration found
+[    0.009151] Faking a node at [mem 0x0000000000000000-0x000000027fffffff]
+[    0.009167] NODE_DATA(0) allocated [mem 0x27ffd0000-0x27fffafff]
+[    0.019262] Zone ranges:
+[    0.019264]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.019267]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.019269]   Normal   [mem 0x0000000100000000-0x000000027fffffff]
+[    0.019271]   Device   empty
+[    0.019274] Movable zone start for each node
+[    0.019277] Early memory node ranges
+[    0.019279]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.019282]   node   0: [mem 0x0000000000100000-0x000000007ffdefff]
+[    0.019284]   node   0: [mem 0x0000000100000000-0x000000027fffffff]
+[    0.019293] Zeroed struct page in unavailable ranges: 131 pages
+[    0.019294] Initmem setup node 0 [mem 0x0000000000001000-0x000000027fffffff]
+[    0.019297] On node 0 totalpages: 2097021
+[    0.019301]   DMA zone: 64 pages used for memmap
+[    0.019302]   DMA zone: 21 pages reserved
+[    0.019304]   DMA zone: 3998 pages, LIFO batch:0
+[    0.019343]   DMA32 zone: 8128 pages used for memmap
+[    0.019345]   DMA32 zone: 520159 pages, LIFO batch:63
+[    0.023722]   Normal zone: 24576 pages used for memmap
+[    0.023723]   Normal zone: 1572864 pages, LIFO batch:63
+[    0.036815] ACPI: PM-Timer IO Port: 0x608
+[    0.036819] ACPI: Local APIC address 0xfee00000
+[    0.036834] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+[    0.036839] Using ACPI for processor (LAPIC) configuration information
+[    0.036842] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.036848] Intel MultiProcessor Specification v1.4
+[    0.036851] MPTABLE: OEM ID: BOCHSCPU
+[    0.036853] MPTABLE: Product ID: 0.1         
+[    0.036854] MPTABLE: APIC at: 0xFEE00000
+[    0.036886] IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+[    0.036889] Processors: 1
+[    0.036894] smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+[    0.036926] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.036929] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.036931] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.036932] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.036935] PM: hibernation: Registered nosave memory: [mem 0x7ffdf000-0x7fffffff]
+[    0.036936] PM: hibernation: Registered nosave memory: [mem 0x80000000-0xafffffff]
+[    0.036938] PM: hibernation: Registered nosave memory: [mem 0xb0000000-0xbfffffff]
+[    0.036940] PM: hibernation: Registered nosave memory: [mem 0xc0000000-0xfed1bfff]
+[    0.036941] PM: hibernation: Registered nosave memory: [mem 0xfed1c000-0xfed1ffff]
+[    0.036943] PM: hibernation: Registered nosave memory: [mem 0xfed20000-0xfeffbfff]
+[    0.036945] PM: hibernation: Registered nosave memory: [mem 0xfeffc000-0xfeffffff]
+[    0.036946] PM: hibernation: Registered nosave memory: [mem 0xff000000-0xfffbffff]
+[    0.036948] PM: hibernation: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+[    0.036952] [mem 0xc0000000-0xfed1bfff] available for PCI devices
+[    0.036954] Booting paravirtualized kernel on KVM
+[    0.036960] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.040464] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:1 nr_cpu_ids:1 nr_node_ids:1
+[    0.041062] percpu: Embedded 507 pages/cpu s2039808 r8192 d28672 u2097152
+[    0.041072] pcpu-alloc: s2039808 r8192 d28672 u2097152 alloc=1*2097152
+[    0.041073] pcpu-alloc: [0] 0 
+[    0.041109] KVM setup async PF for cpu 0
+[    0.041113] kvm-stealtime: cpu 0, msr 277df1040
+[    0.041123] Built 1 zonelists, mobility grouping on.  Total pages: 2064232
+[    0.041124] Policy zone: Normal
+[    0.041128] Kernel command line: BOOT_IMAGE=(hd0,msdos1)/boot/vmlinuz-5.6.19-200.fc31.x86_64+debug root=UUID=b1438b9b-2cab-4065-a99a-08a96687f73c ro no_timer_check net.ifnames=0 console=tty1 console=ttyS0,115200n8 pci_ports=native pci=check_enable_amd_mmconf,noacpi,bios,pcie_scan_all acpi.debug_level=0xffffffff acpi.debug_layer=0x00400004
+[    0.041469] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.041627] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.041670] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.352332] Memory: 8072916K/8388084K available (14340K kernel code, 3417K rwdata, 8488K rodata, 4272K init, 24684K bss, 315168K reserved, 0K cma-reserved)
+[    0.352357] random: get_random_u64 called from __kmem_cache_create+0x3e/0x550 with crng_init=0
+[    0.352648] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.352652] kmemleak: Kernel memory leak detector disabled
+[    0.352781] Kernel/User page tables isolation: enabled
+[    0.352827] ftrace: allocating 42307 entries in 166 pages
+[    0.365516] ftrace: allocated 166 pages with 4 groups
+[    0.365664] Running RCU self tests
+[    0.365667] rcu: Hierarchical RCU implementation.
+[    0.365669] rcu: 	RCU lockdep checking is enabled.
+[    0.365670] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=1.
+[    0.365672] rcu: 	RCU callback double-/use-after-free debug enabled.
+[    0.365674] 	Tasks RCU enabled.
+[    0.365676] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.365678] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.367739] NR_IRQS: 524544, nr_irqs: 256, preallocated irqs: 16
+[    0.379935] Console: colour VGA+ 80x25
+[    0.418960] printk: console [tty1] enabled
+[    0.504434] printk: console [ttyS0] enabled
+[    0.505181] Lock dependency validator: Copyright (c) 2006 Red Hat, Inc., Ingo Molnar
+[    0.506552] ... MAX_LOCKDEP_SUBCLASSES:  8
+[    0.507290] ... MAX_LOCK_DEPTH:          48
+[    0.508032] ... MAX_LOCKDEP_KEYS:        8192
+[    0.508785] ... CLASSHASH_SIZE:          4096
+[    0.509604] ... MAX_LOCKDEP_ENTRIES:     32768
+[    0.510518] ... MAX_LOCKDEP_CHAINS:      65536
+[    0.511370] ... CHAINHASH_SIZE:          32768
+[    0.512269]  memory used by lock dependency info: 6749 kB
+[    0.513152]  memory used for stack traces: 4224 kB
+[    0.513953]  per task-struct memory footprint: 2688 bytes
+[    0.514882] ACPI: Core revision 20200110
+[    0.515645] ACPI: setting ELCR to 0e00 (from 0c00)
+[    0.516534] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604467 ns
+[    0.518144] APIC: Switch to symmetric I/O mode setup
+[    0.519196] x2apic enabled
+[    0.519965] Switched APIC routing to physical x2apic.
+[    0.521849] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.522868] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x1e717e40680, max_idle_ns: 440795297614 ns
+[    0.524579] Calibrating delay loop (skipped) preset value.. 4224.01 BogoMIPS (lpj=2112006)
+[    0.525575] pid_max: default: 32768 minimum: 301
+[    0.526634] LSM: Security Framework initializing
+[    0.527593] Yama: becoming mindful.
+[    0.528587] SELinux:  Initializing.
+[    0.529264] *** VALIDATE selinux ***
+[    0.529621] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.530585] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.531611] *** VALIDATE tmpfs ***
+[    0.532890] *** VALIDATE proc ***
+[    0.533696] *** VALIDATE cgroup ***
+[    0.534498] *** VALIDATE cgroup2 ***
+[    0.534718] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+[    0.535575] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+[    0.536579] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.537576] Spectre V2 : Mitigation: Full generic retpoline
+[    0.538574] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.539574] Speculative Store Bypass: Vulnerable
+[    0.540577] MDS: Vulnerable: Clear CPU buffers attempted, no microcode
+[    0.548742] Freeing SMP alternatives memory: 36K
+[    0.550418] 
+               **** Context Switch from TID 4294967295 to TID 2711734464 ****
+
+[    0.550576]  evxfevnt-0036 enable                : ----Entry
+[    0.551586]  evxfevnt-0074 enable                : ----Exit- AE_OK
+[    0.655558] smpboot: CPU0: Intel QEMU Virtual CPU version 2.5+ (family: 0x6, model: 0x6, stepping: 0x3)
+[    0.656083] Performance Events: PMU not available due to virtualization, using software events only.
+[    0.656722] rcu: Hierarchical SRCU implementation.
+[    0.658847] NMI watchdog: Perf NMI watchdog permanently disabled
+[    0.659738] smp: Bringing up secondary CPUs ...
+[    0.660589] smp: Brought up 1 node, 1 CPU
+[    0.661274] smpboot: Max logical packages: 1
+[    0.661576] smpboot: Total of 1 processors activated (4224.01 BogoMIPS)
+[    0.664215] devtmpfs: initialized
+[    0.664710] x86/mm: Memory block size: 128MB
+[    0.670872] DMA-API: preallocated 65536 debug entries
+[    0.671575] DMA-API: debugging enabled by kernel config
+[    0.672577] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.673601] futex hash table entries: 256 (order: 3, 32768 bytes, linear)
+[    0.674788] pinctrl core: initialized pinctrl subsystem
+
+[    0.676959] *************************************************************
+[    0.677575] **     NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE    **
+[    0.678574] **                                                         **
+[    0.679574] **  IOMMU DebugFS SUPPORT HAS BEEN ENABLED IN THIS KERNEL  **
+[    0.680575] **                                                         **
+[    0.681574] ** This means that this kernel is built to expose internal **
+[    0.682574] ** IOMMU data structures, which may compromise security on **
+[    0.683574] ** your system.                                            **
+[    0.684574] **                                                         **
+[    0.685575] ** If you see this message and you are not debugging the   **
+[    0.686575] ** kernel, report this immediately to your vendor!         **
+[    0.687574] **                                                         **
+[    0.688574] **     NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE    **
+[    0.689574] *************************************************************
+[    0.690624] PM: RTC time: 14:48:36, date: 2020-06-29
+[    0.691589] thermal_sys: Registered thermal governor 'fair_share'
+[    0.691590] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.692575] thermal_sys: Registered thermal governor 'step_wise'
+[    0.693575] thermal_sys: Registered thermal governor 'user_space'
+[    0.694830] NET: Registered protocol family 16
+[    0.696867] audit: initializing netlink subsys (disabled)
+[    0.697944] cpuidle: using governor menu
+[    0.698720] ACPI: bus type PCI registered
+[    0.699579] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.700871] PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xb0000000-0xbfffffff] (base 0xb0000000)
+[    0.701603] audit: type=2000 audit(1593442116.570:1): state=initialized audit_enabled=0 res=1
+[    0.702595] PCI: MMCONFIG at [mem 0xb0000000-0xbfffffff] reserved in E820
+[    0.703591] PCI: Using configuration type 1 for base access
+[    0.712024] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.783979] cryptomgr_test (24) used greatest stack depth: 14136 bytes left
+[    0.807033] cryptomgr_test (25) used greatest stack depth: 13832 bytes left
+[    0.809335] cryptd: max_cpu_qlen set to 1000
+[    0.812621] alg: No test for 842 (842-generic)
+[    0.813531] alg: No test for 842 (842-scomp)
+[    0.815367] cryptomgr_test (49) used greatest stack depth: 13664 bytes left
+[    0.817138] kworker/u2:0 (65) used greatest stack depth: 13280 bytes left
+[    0.820662] ACPI: Added _OSI(Module Device)
+[    0.821380] ACPI: Added _OSI(Processor Device)
+[    0.821576] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.822576] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.823595] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.824339] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.824595] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    0.825611] 
+               **** Context Switch from TID 2711734464 to TID 3068198912 ****
+
+[    0.826575] evhandler-0050 ev_install_region_hand: ----Entry
+[    0.827575] evhandler-0339 ev_install_space_handl: ----Entry
+[    0.828574] evhandler-0436 ev_install_space_handl: Creating object on Device (____ptrval____) while installing handler
+[    0.829640] evhandler-0471 ev_install_space_handl: Installing address handler for region SystemMemory(0) on Device "\"  (____ptrval____)((____ptrval____))
+[    0.830613] evhandler-0526 ev_install_space_handl: ----Exit- AE_OK
+[    0.831584] evhandler-0339 ev_install_space_handl: ----Entry
+[    0.832578] evhandler-0471 ev_install_space_handl: Installing address handler for region SystemIO(1) on Device "\"  (____ptrval____)((____ptrval____))
+[    0.833595] evhandler-0526 ev_install_space_handl: ----Exit- AE_OK
+[    0.834579] evhandler-0339 ev_install_space_handl: ----Entry
+[    0.835578] evhandler-0471 ev_install_space_handl: Installing address handler for region PCI_Config(2) on Device "\"  (____ptrval____)((____ptrval____))
+[    0.836594] evhandler-0526 ev_install_space_handl: ----Exit- AE_OK
+[    0.837579] evhandler-0339 ev_install_space_handl: ----Entry
+[    0.838579] evhandler-0471 ev_install_space_handl: Installing address handler for region DataTable(7E) on Device "\"  (____ptrval____)((____ptrval____))
+[    0.839593] evhandler-0526 ev_install_space_handl: ----Exit- AE_OK
+[    0.840577] evhandler-0100 ev_install_region_hand: ----Exit- AE_OK
+[    0.841611]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.842576]  evrgnini-0531 ev_initialize_region  : Found handler (____ptrval____) for region (____ptrval____) in obj (____ptrval____)
+[    0.843575]  evregion-0478 ev_attach_region      : ----Entry
+[    0.844575]  evregion-0486 ev_attach_region      : Adding Region [DBG_] (____ptrval____) to address handler (____ptrval____) [SystemIO]
+[    0.845577]  evregion-0500 ev_attach_region      : ----Exit- AE_OK
+[    0.846576]  evregion-0528 ev_execute_reg_method : ----Entry
+[    0.847579]  evregion-0532 ev_execute_reg_method : ----Exit- AE_OK
+[    0.848579]  evrgnini-0547 ev_initialize_region  : ----Exit- AE_OK
+[    0.849664]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.850577]  evrgnini-0531 ev_initialize_region  : Found handler (____ptrval____) for region (____ptrval____) in obj (____ptrval____)
+[    0.851578]  evregion-0478 ev_attach_region      : ----Entry
+[    0.852576]  evregion-0486 ev_attach_region      : Adding Region [HPTM] (____ptrval____) to address handler (____ptrval____) [SystemMemory]
+[    0.853578]  evregion-0500 ev_attach_region      : ----Exit- AE_OK
+[    0.854577]  evregion-0528 ev_execute_reg_method : ----Entry
+[    0.855582]  evregion-0532 ev_execute_reg_method : ----Exit- AE_OK
+[    0.856579]  evrgnini-0547 ev_initialize_region  : ----Exit- AE_OK
+[    0.857644]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.858577]  evrgnini-0531 ev_initialize_region  : Found handler (____ptrval____) for region (____ptrval____) in obj (____ptrval____)
+[    0.859575]  evregion-0478 ev_attach_region      : ----Entry
+[    0.860576]  evregion-0486 ev_attach_region      : Adding Region [PIRQ] (____ptrval____) to address handler (____ptrval____) [PCI_Config]
+[    0.861576]  evregion-0500 ev_attach_region      : ----Exit- AE_OK
+[    0.862576]  evregion-0528 ev_execute_reg_method : ----Entry
+[    0.863575]  evregion-0532 ev_execute_reg_method : ----Exit- AE_OK
+[    0.864575]  evrgnini-0547 ev_initialize_region  : ----Exit- AE_OK
+[    0.865593]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.866576]  evrgnini-0531 ev_initialize_region  : Found handler (____ptrval____) for region (____ptrval____) in obj (____ptrval____)
+[    0.867575]  evregion-0478 ev_attach_region      : ----Entry
+[    0.868575]  evregion-0486 ev_attach_region      : Adding Region [LPCD] (____ptrval____) to address handler (____ptrval____) [PCI_Config]
+[    0.869585]  evregion-0500 ev_attach_region      : ----Exit- AE_OK
+[    0.870581]  evregion-0528 ev_execute_reg_method : ----Entry
+[    0.871577]  evregion-0532 ev_execute_reg_method : ----Exit- AE_OK
+[    0.872579]  evrgnini-0547 ev_initialize_region  : ----Exit- AE_OK
+[    0.873624]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.874578]  evrgnini-0531 ev_initialize_region  : Found handler (____ptrval____) for region (____ptrval____) in obj (____ptrval____)
+[    0.875576]  evregion-0478 ev_attach_region      : ----Entry
+[    0.876576]  evregion-0486 ev_attach_region      : Adding Region [LPCE] (____ptrval____) to address handler (____ptrval____) [PCI_Config]
+[    0.877576]  evregion-0500 ev_attach_region      : ----Exit- AE_OK
+[    0.878576]  evregion-0528 ev_execute_reg_method : ----Entry
+[    0.879575]  evregion-0532 ev_execute_reg_method : ----Exit- AE_OK
+[    0.880526]  evrgnini-0547 ev_initialize_region  : ----Exit- AE_OK
+[    0.881665]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.882575]  evrgnini-0531 ev_initialize_region  : Found handler (____ptrval____) for region (____ptrval____) in obj (____ptrval____)
+[    0.883575]  evregion-0478 ev_attach_region      : ----Entry
+[    0.884581]  evregion-0486 ev_attach_region      : Adding Region [PCST] (____ptrval____) to address handler (____ptrval____) [SystemIO]
+[    0.885577]  evregion-0500 ev_attach_region      : ----Exit- AE_OK
+[    0.886576]  evregion-0528 ev_execute_reg_method : ----Entry
+[    0.887575]  evregion-0532 ev_execute_reg_method : ----Exit- AE_OK
+[    0.888575]  evrgnini-0547 ev_initialize_region  : ----Exit- AE_OK
+[    0.889603]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.890575]  evrgnini-0531 ev_initialize_region  : Found handler (____ptrval____) for region (____ptrval____) in obj (____ptrval____)
+[    0.891579]  evregion-0478 ev_attach_region      : ----Entry
+[    0.892577]  evregion-0486 ev_attach_region      : Adding Region [SEJ_] (____ptrval____) to address handler (____ptrval____) [SystemIO]
+[    0.893579]  evregion-0500 ev_attach_region      : ----Exit- AE_OK
+[    0.894578]  evregion-0528 ev_execute_reg_method : ----Entry
+[    0.895576]  evregion-0532 ev_execute_reg_method : ----Exit- AE_OK
+[    0.896582]  evrgnini-0547 ev_initialize_region  : ----Exit- AE_OK
+[    0.897607]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.898576]  evrgnini-0531 ev_initialize_region  : Found handler (____ptrval____) for region (____ptrval____) in obj (____ptrval____)
+[    0.899576]  evregion-0478 ev_attach_region      : ----Entry
+[    0.900575]  evregion-0486 ev_attach_region      : Adding Region [BNMR] (____ptrval____) to address handler (____ptrval____) [SystemIO]
+[    0.901581]  evregion-0500 ev_attach_region      : ----Exit- AE_OK
+[    0.902576]  evregion-0528 ev_execute_reg_method : ----Entry
+[    0.903575]  evregion-0532 ev_execute_reg_method : ----Exit- AE_OK
+[    0.904576]  evrgnini-0547 ev_initialize_region  : ----Exit- AE_OK
+[    0.909370]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.909577]  evrgnini-0531 ev_initialize_region  : Found handler (____ptrval____) for region (____ptrval____) in obj (____ptrval____)
+[    0.910575]  evregion-0478 ev_attach_region      : ----Entry
+[    0.911575]  evregion-0486 ev_attach_region      : Adding Region [PRST] (____ptrval____) to address handler (____ptrval____) [SystemIO]
+[    0.912576]  evregion-0500 ev_attach_region      : ----Exit- AE_OK
+[    0.913579]  evregion-0528 ev_execute_reg_method : ----Entry
+[    0.914578]  evregion-0532 ev_execute_reg_method : ----Exit- AE_OK
+[    0.915578]  evrgnini-0547 ev_initialize_region  : ----Exit- AE_OK
+[    0.919654]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.920576]  evrgnini-0488 ev_initialize_region  : ----Exit- AE_OK
+[    0.921576]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.922579]  evrgnini-0488 ev_initialize_region  : ----Exit- AE_OK
+[    0.923577]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.924577]  evrgnini-0488 ev_initialize_region  : ----Exit- AE_OK
+[    0.925577]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.926507]  evrgnini-0488 ev_initialize_region  : ----Exit- AE_OK
+[    0.926575]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.927575]  evrgnini-0488 ev_initialize_region  : ----Exit- AE_OK
+[    0.928575]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.929575]  evrgnini-0488 ev_initialize_region  : ----Exit- AE_OK
+[    0.930629]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.931575]  evrgnini-0488 ev_initialize_region  : ----Exit- AE_OK
+[    0.934390]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.934575]  evrgnini-0488 ev_initialize_region  : ----Exit- AE_OK
+[    0.936805]  evrgnini-0481 ev_initialize_region  : ----Entry
+[    0.937576]  evrgnini-0488 ev_initialize_region  : ----Exit- AE_OK
+[    0.938623] ACPI: 1 ACPI AML tables successfully acquired and loaded
+[    0.940657]   evevent-0038 ev_initialize_events  : ----Entry
+[    0.941640] evgpeinit-0053 ev_gpe_initialize     : ----Entry
+[    0.942578] Initializing General Purpose Events (GPEs):
+[    0.943578]  evgpeblk-0314 ev_create_gpe_block   : ----Entry
+[    0.944580]  evgpeblk-0179 ev_create_gpe_info_blo: ----Entry
+[    0.945698]  evgpeblk-0269 ev_create_gpe_info_blo: ----Exit- AE_OK
+[    0.946578]  evgpeblk-0049 ev_install_gpe_block  : ----Entry
+[    0.947578] evgpeutil-0139 ev_get_gpe_xrupt_block: ----Entry
+[    0.948603] evgpeutil-0194 ev_get_gpe_xrupt_block: ----Exit- AE_OK
+[    0.949580]  evgpeblk-0082 ev_install_gpe_block  : ----Exit- AE_OK
+[    0.950577] evgpeinit-0295 ev_match_gpe_method   : ----Entry
+[    0.951611] evgpeinit-0406 ev_match_gpe_method   : Registered GPE method _E02 as GPE number 0x02
+[    0.952575] evgpeinit-0409 ev_match_gpe_method   : ----Exit- AE_OK
+[    0.953575] evgpeinit-0295 ev_match_gpe_method   : ----Entry
+[    0.954605] evgpeinit-0406 ev_match_gpe_method   : Registered GPE method _E01 as GPE number 0x01
+[    0.955575] evgpeinit-0409 ev_match_gpe_method   : ----Exit- AE_OK
+[    0.956576]     Initialized GPE 00 to 3F [_GPE] 8 regs on interrupt 0x9 (SCI)
+[    0.957575]  evgpeblk-0389 ev_create_gpe_block   : ----Exit- AE_OK
+[    0.958575] evgpeinit-0175 ev_gpe_initialize     : ----Exit- AE_OK
+[    0.959575]   evevent-0065 ev_initialize_events  : ----Exit- AE_OK
+[    0.960576]   evevent-0084 ev_install_xrupt_handl: ----Entry
+[    0.961575]     evsci-0154 ev_install_sci_handler: ----Entry
+[    0.962578]   evxface-0538 install_global_event_h: ----Entry
+[    0.963576]   evxface-0563 install_global_event_h: ----Exit- AE_OK
+[    0.964758]     evsci-0160 ev_install_sci_handler: ----Exit- AE_OK
+[    0.965575]   evglock-0037 ev_init_global_lock_ha: ----Entry
+[    0.966575]   evxface-0589 install_fixed_event_ha: ----Entry
+[    0.967579]  evxfevnt-0269 clear_event           : ----Entry
+[    0.968586]  evxfevnt-0291 clear_event           : ----Exit- AE_OK
+[    0.969576]  evxfevnt-0147 enable_event          : ----Entry
+[    0.970590]  evxfevnt-0188 enable_event          : ----Exit- AE_OK
+[    0.971576]   evxface-0627 install_fixed_event_ha: Enabled fixed event GlobalLock (1), Handler=(____ptrval____)
+[    0.972576]   evxface-0635 install_fixed_event_ha: ----Exit- AE_OK
+[    0.973580]   evglock-0072 ev_init_global_lock_ha: ----Exit- AE_OK
+[    0.974576]   evevent-0111 ev_install_xrupt_handl: ----Exit- AE_OK
+[    0.975607]  evregion-0048 ev_initialize_op_regio: ----Entry
+[    0.976577]  evregion-0654 ev_execute_reg_methods: ----Entry
+[    0.977575]  evregion-0666 ev_execute_reg_methods: ----Exit-
+[    0.978575]  evregion-0654 ev_execute_reg_methods: ----Entry
+[    0.979575]  evregion-0666 ev_execute_reg_methods: ----Exit-
+[    0.980575]  evregion-0654 ev_execute_reg_methods: ----Entry
+[    0.981575]     Running _REG methods for SpaceId PCI_Config
+[    0.982585]  evregion-0528 ev_execute_reg_method : ----Entry
+[    0.983579]  evregion-0558 ev_execute_reg_method : ----Exit- AE_OK
+[    0.984577]  evregion-0528 ev_execute_reg_method : ----Entry
+[    0.985579]  evregion-0558 ev_execute_reg_method : ----Exit- AE_OK
+[    0.986579]  evregion-0528 ev_execute_reg_method : ----Entry
+[    0.987576]  evregion-0558 ev_execute_reg_method : ----Exit- AE_OK
+[    0.988929]     Executed 3 _REG methods for SpaceId PCI_Config
+[    0.989575]  evregion-0698 ev_execute_reg_methods: ----Exit-
+[    0.990575]  evregion-0654 ev_execute_reg_methods: ----Entry
+[    0.991575]  evregion-0666 ev_execute_reg_methods: ----Exit-
+[    0.992575]  evregion-0073 ev_initialize_op_regio: ----Exit- AE_OK
+[    0.993576] Executing  Method       \_SB._STA
+[    0.994303] Executing  Method       \_SB.PCI0._STA
+[    0.994587] Executing  Method       \_SB.PCI0._INI
+[    0.995584] Executing  Method       \_SB.PCI0.PRES._STA
+[    0.996590] Executing  Method       \_SB.PCI0.PRES._INI
+[    0.997613]  evregion-0116 ev_address_space_dispa: ----Entry
+[    0.998578]  evrgnini-0100 ev_io_space_region_set: ----Entry
+[    0.999577]  evrgnini-0108 ev_io_space_region_set: ----Exit- AE_OK
+[    1.000579]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000CD8 [SystemIO]
+[    1.001585]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.003863] ACPI: Interpreter enabled
+[    1.004618] ACPI: (supports S0 S3 S4 S5)
+[    1.005301] ACPI: Using PIC for interrupt routing
+[    1.005609]   evxface-0068 install_notify_handler: ----Entry
+[    1.006576]   evxface-0189 install_notify_handler: ----Exit- AE_OK
+[    1.007597] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    1.009949]   evxfgpe-0048 update_all_gpes       : ----Entry
+[    1.010576] evgpeutil-0038 ev_walk_gpe_list      : ----Entry
+[    1.011580]  evgpeblk-0420 ev_initialize_gpe_bloc: ----Entry
+[    1.012471]     evgpe-0164 ev_add_gpe_reference  : ----Entry
+[    1.012571]     evgpe-0042 ev_update_gpe_enable_m: ----Entry
+[    1.012571]     evgpe-0063 ev_update_gpe_enable_m: ----Exit- AE_OK
+[    1.012571]     evgpe-0082 ev_enable_gpe         : ----Entry
+[    1.012571]     evgpe-0087 ev_enable_gpe         : ----Exit- AE_OK
+[    1.012571]     evgpe-0189 ev_add_gpe_reference  : ----Exit- AE_OK
+[    1.012571]     evgpe-0164 ev_add_gpe_reference  : ----Entry
+[    1.012571]     evgpe-0042 ev_update_gpe_enable_m: ----Entry
+[    1.012571]     evgpe-0063 ev_update_gpe_enable_m: ----Exit- AE_OK
+[    1.012571]     evgpe-0082 ev_enable_gpe         : ----Entry
+[    1.012571]     evgpe-0087 ev_enable_gpe         : ----Exit- AE_OK
+[    1.012571]     evgpe-0189 ev_add_gpe_reference  : ----Exit- AE_OK
+[    1.012571] ACPI: Enabled 2 GPEs in block 00 to 3F
+[    1.012571]  evgpeblk-0487 ev_initialize_gpe_bloc: ----Exit- AE_OK
+[    1.012578] evgpeutil-0072 ev_walk_gpe_list      : ----Exit- AE_OK
+[    1.013577]     evgpe-0639 ev_detect_gpe         : ----Entry
+[    1.014604]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 00: Status=00, Enable=00, RunEnable=06, WakeEnable=00
+[    1.015575]     evgpe-0639 ev_detect_gpe         : ----Entry
+[    1.016591]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 01: Status=00, Enable=02, RunEnable=06, WakeEnable=00
+[    1.017580]     evgpe-0639 ev_detect_gpe         : ----Entry
+[    1.018598]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 02: Status=00, Enable=04, RunEnable=06, WakeEnable=00
+[    1.019574]     evgpe-0639 ev_detect_gpe         : ----Entry
+[    1.020588]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 03: Status=00, Enable=00, RunEnable=06, WakeEnable=00
+[    1.021574]     evgpe-0639 ev_detect_gpe         : ----Entry
+[    1.022588]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 04: Status=00, Enable=00, RunEnable=06, WakeEnable=00
+[    1.023574]     evgpe-0639 ev_detect_gpe         : ----Entry
+[    1.024593]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 05: Status=00, Enable=00, RunEnable=06, WakeEnable=00
+[    1.025576]     evgpe-0639 ev_detect_gpe         : ----Entry
+[    1.026591]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 06: Status=00, Enable=00, RunEnable=06, WakeEnable=00
+[    1.027575]     evgpe-0639 ev_detect_gpe         : ----Entry
+[    1.028591]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 07: Status=00, Enable=00, RunEnable=06, WakeEnable=00
+[    1.029575]     evgpe-0396 ev_gpe_detect         : Ignore disabled registers for GPE 08-0F: RunEnable=00, WakeEnable=00
+[    1.030571]     evgpe-0396 ev_gpe_detect         : Ignore disabled registers for GPE 10-17: RunEnable=00, WakeEnable=00
+[    1.030571]     evgpe-0396 ev_gpe_detect         : Ignore disabled registers for GPE 18-1F: RunEnable=00, WakeEnable=00
+[    1.030571]     evgpe-0396 ev_gpe_detect         : Ignore disabled registers for GPE 20-27: RunEnable=00, WakeEnable=00
+[    1.030571]     evgpe-0396 ev_gpe_detect         : Ignore disabled registers for GPE 28-2F: RunEnable=00, WakeEnable=00
+[    1.030571]     evgpe-0396 ev_gpe_detect         : Ignore disabled registers for GPE 30-37: RunEnable=00, WakeEnable=00
+[    1.030571]     evgpe-0396 ev_gpe_detect         : Ignore disabled registers for GPE 38-3F: RunEnable=00, WakeEnable=00
+[    1.030580]   evxfgpe-0074 update_all_gpes       : ----Exit- AE_OK
+[    1.043804]   evglock-0176 ev_acquire_global_lock: ----Entry
+[    1.044590]   evglock-0220 ev_acquire_global_lock: Acquired hardware Global Lock
+[    1.045574]   evglock-0251 ev_acquire_global_lock: ----Exit- AE_OK
+[    1.046579]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.047579]  evrgnini-0042 ev_system_memory_regio: ----Entry
+[    1.048581]  evrgnini-0077 ev_system_memory_regio: ----Exit- AE_OK
+[    1.049578]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 00000000FED00000 [SystemMemory]
+[    1.050614]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.051579]   evglock-0271 ev_release_global_lock: ----Entry
+[    1.052577]   evglock-0298 ev_release_global_lock: Released hardware Global Lock
+[    1.053576]   evglock-0307 ev_release_global_lock: ----Exit- AE_OK
+[    1.054605]   evglock-0176 ev_acquire_global_lock: ----Entry
+[    1.055577]   evglock-0220 ev_acquire_global_lock: Acquired hardware Global Lock
+[    1.056575]   evglock-0251 ev_acquire_global_lock: ----Exit- AE_OK
+[    1.057576]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.058465]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 00000000FED00004 [SystemMemory]
+[    1.058587]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.059576]   evglock-0271 ev_release_global_lock: ----Entry
+[    1.060575]   evglock-0298 ev_release_global_lock: Released hardware Global Lock
+[    1.061575]   evglock-0307 ev_release_global_lock: ----Exit- AE_OK
+[    1.062849]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.063577]  evrgnini-0143 ev_pci_config_region_s: ----Entry
+[    1.064585]  evxfregn-0051 install_address_space_: ----Entry
+[    1.065575] evhandler-0339 ev_install_space_handl: ----Entry
+[    1.066575] evhandler-0436 ev_install_space_handl: Creating object on Device (____ptrval____) while installing handler
+[    1.067576] evhandler-0471 ev_install_space_handl: Installing address handler for region PCI_Config(2) on Device PCI0 (____ptrval____)((____ptrval____))
+[    1.068593]  evregion-0318 ev_detach_region      : ----Entry
+[    1.069578]  evregion-0347 ev_detach_region      : Removing Region (____ptrval____) from address handler (____ptrval____)
+[    1.070576]  evregion-0528 ev_execute_reg_method : ----Entry
+[    1.071583]  evregion-0558 ev_execute_reg_method : ----Exit- AE_OK
+[    1.072578]  evregion-0430 ev_detach_region      : ----Exit-
+[    1.073577]  evregion-0478 ev_attach_region      : ----Entry
+[    1.074578]  evregion-0486 ev_attach_region      : Adding Region [PIRQ] (____ptrval____) to address handler (____ptrval____) [PCI_Config]
+[    1.075581]  evregion-0500 ev_attach_region      : ----Exit- AE_OK
+[    1.076578]  evregion-0318 ev_detach_region      : ----Entry
+[    1.077575]  evregion-0347 ev_detach_region      : Removing Region (____ptrval____) from address handler (____ptrval____)
+[    1.078576]  evregion-0528 ev_execute_reg_method : ----Entry
+[    1.079580]  evregion-0558 ev_execute_reg_method : ----Exit- AE_OK
+[    1.080576]  evregion-0430 ev_detach_region      : ----Exit-
+[    1.081575]  evregion-0478 ev_attach_region      : ----Entry
+[    1.082579]  evregion-0486 ev_attach_region      : Adding Region [LPCD] (____ptrval____) to address handler (____ptrval____) [PCI_Config]
+[    1.083576]  evregion-0500 ev_attach_region      : ----Exit- AE_OK
+[    1.084579]  evregion-0318 ev_detach_region      : ----Entry
+[    1.085575]  evregion-0347 ev_detach_region      : Removing Region (____ptrval____) from address handler (____ptrval____)
+[    1.086575]  evregion-0528 ev_execute_reg_method : ----Entry
+[    1.087578]  evregion-0558 ev_execute_reg_method : ----Exit- AE_OK
+[    1.088575]  evregion-0430 ev_detach_region      : ----Exit-
+[    1.089575]  evregion-0478 ev_attach_region      : ----Entry
+[    1.090575]  evregion-0486 ev_attach_region      : Adding Region [LPCE] (____ptrval____) to address handler (____ptrval____) [PCI_Config]
+[    1.091580]  evregion-0500 ev_attach_region      : ----Exit- AE_OK
+[    1.092860] evhandler-0526 ev_install_space_handl: ----Exit- AE_OK
+[    1.093580]  evregion-0654 ev_execute_reg_methods: ----Entry
+[    1.094579]     Running _REG methods for SpaceId PCI_Config
+[    1.095585]  evregion-0528 ev_execute_reg_method : ----Entry
+[    1.096583]  evregion-0558 ev_execute_reg_method : ----Exit- AE_OK
+[    1.097578]  evregion-0528 ev_execute_reg_method : ----Entry
+[    1.098586]  evregion-0558 ev_execute_reg_method : ----Exit- AE_OK
+[    1.099581]  evregion-0528 ev_execute_reg_method : ----Entry
+[    1.100578]  evregion-0558 ev_execute_reg_method : ----Exit- AE_OK
+[    1.101861]     Executed 3 _REG methods for SpaceId PCI_Config
+[    1.102576]  evregion-0698 ev_execute_reg_methods: ----Exit-
+[    1.103576]  evxfregn-0087 install_address_space_: ----Exit- AE_OK
+[    1.104618]  evrgnini-0295 ev_pci_config_region_s: ----Exit- AE_OK
+[    1.105576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000060 [PCI_Config]
+[    1.106582]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.107680]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.108575]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000060 [PCI_Config]
+[    1.109582]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.110778]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.111576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000061 [PCI_Config]
+[    1.112582]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.113661]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.114575]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000061 [PCI_Config]
+[    1.115589]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.116831]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.118577]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000062 [PCI_Config]
+[    1.119590]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.120696]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.121576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000062 [PCI_Config]
+[    1.122595]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.123798]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.124576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000063 [PCI_Config]
+[    1.125582]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.126666]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.127575]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000063 [PCI_Config]
+[    1.128583]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.129765]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.130576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000068 [PCI_Config]
+[    1.131585]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.132674]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.133575]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000068 [PCI_Config]
+[    1.134585]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.136641]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.137578]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000069 [PCI_Config]
+[    1.138588]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.139713]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.140576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000069 [PCI_Config]
+[    1.141596]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.142806]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.143576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 000000000000006A [PCI_Config]
+[    1.144594]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.145682]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.146576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 000000000000006A [PCI_Config]
+[    1.147583]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.148773]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.149576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 000000000000006B [PCI_Config]
+[    1.150582]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.151651]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.152543]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 000000000000006B [PCI_Config]
+[    1.152590]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.155769]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.156576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000CD8 [SystemIO]
+[    1.157584]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.158601]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.159489]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000CDC [SystemIO]
+[    1.159579]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.160889] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    1.161588] acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI HPX-Type3]
+[    1.163589] acpi PNP0A08:00: _OSC: platform does not support [LTR]
+[    1.164861] acpi PNP0A08:00: _OSC: OS now controls [PCIeHotplug SHPCHotplug PME AER PCIeCapability]
+[    1.166606] acpiphp: Slot [0] registered
+[    1.167370] acpiphp: Slot [2] registered
+[    1.167615] acpiphp: Slot [3] registered
+[    1.168617] acpiphp: Slot [4] registered
+[    1.169617] acpiphp: Slot [5] registered
+[    1.170431] acpiphp: Slot [7] registered
+[    1.170620] acpiphp: Slot [8] registered
+[    1.171613] acpiphp: Slot [9] registered
+[    1.172613] acpiphp: Slot [10] registered
+[    1.173330] acpiphp: Slot [11] registered
+[    1.173614] acpiphp: Slot [12] registered
+[    1.174613] acpiphp: Slot [13] registered
+[    1.175589] acpiphp: Slot [14] registered
+[    1.176305] acpiphp: Slot [15] registered
+[    1.176614] acpiphp: Slot [16] registered
+[    1.177612] acpiphp: Slot [17] registered
+[    1.178327] acpiphp: Slot [18] registered
+[    1.178616] acpiphp: Slot [19] registered
+[    1.179613] acpiphp: Slot [20] registered
+[    1.180615] acpiphp: Slot [21] registered
+[    1.181375] acpiphp: Slot [22] registered
+[    1.181612] acpiphp: Slot [23] registered
+[    1.182637] acpiphp: Slot [24] registered
+[    1.183650] acpiphp: Slot [25] registered
+[    1.184641] acpiphp: Slot [26] registered
+[    1.185617] acpiphp: Slot [27] registered
+[    1.186614] acpiphp: Slot [28] registered
+[    1.187613] acpiphp: Slot [29] registered
+[    1.188615] acpiphp: Slot [30] registered
+[    1.189322] PCI host bridge to bus 0000:00
+[    1.189577] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    1.190576] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    1.191580] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    1.192576] pci_bus 0000:00: root bus resource [mem 0x80000000-0xafffffff window]
+[    1.193576] pci_bus 0000:00: root bus resource [mem 0xc0000000-0xfebfffff window]
+[    1.194576] pci_bus 0000:00: root bus resource [mem 0x280000000-0xa7fffffff window]
+[    1.195577] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    1.196656] pci 0000:00:00.0: [8086:29c0] type 00 class 0x060000
+[    1.198820]   evxface-0068 install_notify_handler: ----Entry
+[    1.199586]   evxface-0189 install_notify_handler: ----Exit- AE_OK
+[    1.200791] pci 0000:00:01.0: [1234:1111] type 00 class 0x030000
+[    1.203589] pci 0000:00:01.0: reg 0x10: [mem 0xfd000000-0xfdffffff pref]
+[    1.205968] pci 0000:00:01.0: reg 0x18: [mem 0xfea94000-0xfea94fff]
+[    1.210360] pci 0000:00:01.0: reg 0x30: [mem 0xfea80000-0xfea8ffff pref]
+[    1.210943]   evxface-0068 install_notify_handler: ----Entry
+[    1.211587]   evxface-0189 install_notify_handler: ----Exit- AE_OK
+[    1.212846] pci 0000:00:02.0: [8086:10d3] type 00 class 0x020000
+[    1.215058] pci 0000:00:02.0: reg 0x10: [mem 0xfea40000-0xfea5ffff]
+[    1.217531] pci 0000:00:02.0: reg 0x14: [mem 0xfea60000-0xfea7ffff]
+[    1.218482] pci 0000:00:02.0: reg 0x18: [io  0xc040-0xc05f]
+[    1.220578] pci 0000:00:02.0: reg 0x1c: [mem 0xfea90000-0xfea93fff]
+[    1.224048] pci 0000:00:02.0: reg 0x30: [mem 0xfea00000-0xfea3ffff pref]
+[    1.225765]   evxface-0068 install_notify_handler: ----Entry
+[    1.226581]   evxface-0189 install_notify_handler: ----Exit- AE_OK
+[    1.227760] pci 0000:00:06.0: [1b36:000c] type 01 class 0x060400
+[    1.230577] pci 0000:00:06.0: reg 0x10: [mem 0xfea95000-0xfea95fff]
+[    1.233442]   evxface-0068 install_notify_handler: ----Entry
+[    1.233579]   evxface-0189 install_notify_handler: ----Exit- AE_OK
+[    1.234743] pci 0000:00:07.0: [1b36:000c] type 01 class 0x060400
+[    1.237157] pci 0000:00:07.0: reg 0x10: [mem 0xfea96000-0xfea96fff]
+[    1.239680]   evxface-0068 install_notify_handler: ----Entry
+[    1.240580]   evxface-0189 install_notify_handler: ----Exit- AE_OK
+[    1.242745] pci 0000:00:1f.0: [8086:2918] type 00 class 0x060100
+[    1.244112] pci 0000:00:1f.0: quirk: [io  0x0600-0x067f] claimed by ICH6 ACPI/GPIO/TCO
+[    1.244867]   evxface-0068 install_notify_handler: ----Entry
+[    1.245579]   evxface-0189 install_notify_handler: ----Exit- AE_OK
+[    1.246742] pci 0000:00:1f.2: [8086:2922] type 00 class 0x010601
+[    1.250312] pci 0000:00:1f.2: reg 0x20: [io  0xc060-0xc07f]
+[    1.251576] pci 0000:00:1f.2: reg 0x24: [mem 0xfea97000-0xfea97fff]
+[    1.253440] pci 0000:00:1f.3: [8086:2930] type 00 class 0x0c0500
+[    1.256055] pci 0000:00:1f.3: reg 0x20: [io  0x0700-0x073f]
+[    1.258778]   evxface-0068 install_notify_handler: ----Entry
+[    1.259583]   evxface-0189 install_notify_handler: ----Exit- AE_OK
+[    1.263401] acpiphp: Slot [0-2] registered
+[    1.263633] acpiphp: Slot [1] registered
+[    1.264615] acpiphp: Slot [2-2] registered
+[    1.265576] acpiphp: Slot [3-2] registered
+[    1.266343] acpiphp: Slot [4-2] registered
+[    1.266633] acpiphp: Slot [5-2] registered
+[    1.267620] acpiphp: Slot [6] registered
+[    1.268600] acpiphp: Slot [7-2] registered
+[    1.269529] acpiphp: Slot [8-2] registered
+[    1.269636] acpiphp: Slot [9-2] registered
+[    1.270658] acpiphp: Slot [10-2] registered
+[    1.271633] acpiphp: Slot [11-2] registered
+[    1.272634] acpiphp: Slot [12-2] registered
+[    1.273629] acpiphp: Slot [13-2] registered
+[    1.274391] acpiphp: Slot [14-2] registered
+[    1.274628] acpiphp: Slot [15-2] registered
+[    1.275637] acpiphp: Slot [16-2] registered
+[    1.276633] acpiphp: Slot [17-2] registered
+[    1.277628] acpiphp: Slot [18-2] registered
+[    1.278394] acpiphp: Slot [19-2] registered
+[    1.278633] acpiphp: Slot [20-2] registered
+[    1.279628] acpiphp: Slot [21-2] registered
+[    1.280630] acpiphp: Slot [22-2] registered
+[    1.281386] acpiphp: Slot [23-2] registered
+[    1.281629] acpiphp: Slot [24-2] registered
+[    1.282627] acpiphp: Slot [25-2] registered
+[    1.283629] acpiphp: Slot [26-2] registered
+[    1.284628] acpiphp: Slot [27-2] registered
+[    1.285384] acpiphp: Slot [28-2] registered
+[    1.285627] acpiphp: Slot [29-2] registered
+[    1.286628] acpiphp: Slot [30-2] registered
+[    1.287628] acpiphp: Slot [31] registered
+[    1.288743] pci 0000:00:06.0: PCI bridge to [bus 01]
+[    1.289582] pci 0000:00:06.0:   bridge window [mem 0xfe800000-0xfe9fffff]
+[    1.290598] pci 0000:00:06.0:   bridge window [mem 0xfe200000-0xfe3fffff 64bit pref]
+[    1.292593] pci 0000:00:07.0: PCI bridge to [bus 02]
+[    1.293601] pci 0000:00:07.0:   bridge window [mem 0xfe600000-0xfe7fffff]
+[    1.294608] pci 0000:00:07.0:   bridge window [mem 0xfe000000-0xfe1fffff 64bit pref]
+[    1.297112]   evxface-0068 install_notify_handler: ----Entry
+[    1.297580]   evxface-0189 install_notify_handler: ----Exit- AE_OK
+[    1.299649]  evxfregn-0051 install_address_space_: ----Entry
+[    1.300577] evhandler-0339 ev_install_space_handl: ----Entry
+[    1.301575] evhandler-0436 ev_install_space_handl: Creating object on Device (____ptrval____) while installing handler
+[    1.302578] evhandler-0471 ev_install_space_handl: Installing address handler for region SystemCMOS(5) on Device RTC_ (____ptrval____)((____ptrval____))
+[    1.303583] evhandler-0526 ev_install_space_handl: ----Exit- AE_OK
+[    1.304578]  evregion-0654 ev_execute_reg_methods: ----Entry
+[    1.305578]     Running _REG methods for SpaceId SystemCMOS
+[    1.306586]     Executed 0 _REG methods for SpaceId SystemCMOS
+[    1.307578]  evregion-0698 ev_execute_reg_methods: ----Exit-
+[    1.308578]  evxfregn-0087 install_address_space_: ----Exit- AE_OK
+[    1.310895]   evglock-0176 ev_acquire_global_lock: ----Entry
+[    1.311583]   evglock-0220 ev_acquire_global_lock: Acquired hardware Global Lock
+[    1.312576]   evglock-0251 ev_acquire_global_lock: ----Exit- AE_OK
+[    1.313577]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.314576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 00000000FED00000 [SystemMemory]
+[    1.315585]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.316577]   evglock-0271 ev_release_global_lock: ----Entry
+[    1.317576]   evglock-0298 ev_release_global_lock: Released hardware Global Lock
+[    1.318576]   evglock-0307 ev_release_global_lock: ----Exit- AE_OK
+[    1.319602]   evglock-0176 ev_acquire_global_lock: ----Entry
+[    1.320577]   evglock-0220 ev_acquire_global_lock: Acquired hardware Global Lock
+[    1.321581]   evglock-0251 ev_acquire_global_lock: ----Exit- AE_OK
+[    1.322578]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.323579]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 00000000FED00004 [SystemMemory]
+[    1.324589]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.325576]   evglock-0271 ev_release_global_lock: ----Entry
+[    1.326575]   evglock-0298 ev_release_global_lock: Released hardware Global Lock
+[    1.327578]   evglock-0307 ev_release_global_lock: ----Exit- AE_OK
+[    1.328798]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.329576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000060 [PCI_Config]
+[    1.330587]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.331655]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.332577]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000060 [PCI_Config]
+[    1.333584]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.334650] PCI: setting IRQ 10 as level-triggered
+[    1.334749]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.335576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000061 [PCI_Config]
+[    1.336582]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.337632]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.338575]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000061 [PCI_Config]
+[    1.339589]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.340816]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.341579]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000062 [PCI_Config]
+[    1.342593]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.343673]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.344580]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000062 [PCI_Config]
+[    1.345593]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.347637] PCI: setting IRQ 11 as level-triggered
+[    1.347739]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.348576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000063 [PCI_Config]
+[    1.349582]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.350634]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.351576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000063 [PCI_Config]
+[    1.352583]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.353728]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.354576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000068 [PCI_Config]
+[    1.355582]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.356636]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.357575]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000068 [PCI_Config]
+[    1.358582]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.359710]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.360576]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000069 [PCI_Config]
+[    1.361589]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.362655]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.363579]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000069 [PCI_Config]
+[    1.364586]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.365752]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.366577]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 000000000000006A [PCI_Config]
+[    1.367585]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.368644]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.369575]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 000000000000006A [PCI_Config]
+[    1.370583]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.371729]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.372575]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 000000000000006B [PCI_Config]
+[    1.373582]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.374627]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.375544]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 000000000000006B [PCI_Config]
+[    1.375591]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.378308]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.378578]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000CD8 [SystemIO]
+[    1.379585]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.380618]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.381577]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000CDC [SystemIO]
+[    1.382585]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.384031]   evxface-0068 install_notify_handler: ----Entry
+[    1.384582]   evxface-0189 install_notify_handler: ----Exit- AE_OK
+[    1.385883] iommu: Default domain type: Translated 
+[    1.386785] pci 0000:00:01.0: vgaarb: setting as boot VGA device
+[    1.387571] pci 0000:00:01.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    1.388575] pci 0000:00:01.0: vgaarb: bridge control possible
+[    1.389576] vgaarb: loaded
+[    1.390608] SCSI subsystem initialized
+[    1.391422] libata version 3.00 loaded.
+[    1.391491] ACPI: bus type USB registered
+[    1.391630] usbcore: registered new interface driver usbfs
+[    1.392605] usbcore: registered new interface driver hub
+[    1.393601] usbcore: registered new device driver usb
+[    1.394660] pps_core: LinuxPPS API ver. 1 registered
+[    1.395575] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.396581] PTP clock support registered
+[    1.397655] EDAC MC: Ver: 3.0.0
+[    1.398974] PCI: Probing PCI hardware
+[    1.399576] PCI: root bus 00: using default resources
+[    1.399579] PCI: Probing PCI hardware (bus 00)
+[    1.444378] pci 0000:00:01.0: PIIX/ICH IRQ router [1234:1111]
+[    1.444581] PCI: pci_cache_line_size set to 64 bytes
+[    1.444686] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+[    1.444704] e820: reserve RAM buffer [mem 0x7ffdf000-0x7fffffff]
+[    1.446013] NetLabel: Initializing
+[    1.446575] NetLabel:  domain hash size = 128
+[    1.447305] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    1.447619] NetLabel:  unlabeled traffic allowed by default
+[    1.448778] hpet: 3 channels of 0 reserved for per-cpu timers
+[    1.449586] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+[    1.450575] hpet0: 3 comparators, 64-bit 100.000000 MHz counter
+[    1.454740] clocksource: Switched to clocksource kvm-clock
+[    1.512749] *** VALIDATE bpf ***
+[    1.513773] VFS: Disk quotas dquot_6.6.0
+[    1.515217] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.516834] *** VALIDATE ramfs ***
+[    1.517924] *** VALIDATE hugetlbfs ***
+[    1.519020] pnp: PnP ACPI init
+[    1.519879] pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+[    1.519935] pnp 00:01: Plug and Play ACPI device, IDs PNP0f13 (active)
+[    1.519988] pnp 00:02: Plug and Play ACPI device, IDs PNP0400 (active)
+[    1.520039] pnp 00:03: Plug and Play ACPI device, IDs PNP0501 (active)
+[    1.520089] pnp 00:04: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    1.520355]   evglock-0176 ev_acquire_global_lock: ----Entry
+[    1.521279]   evglock-0220 ev_acquire_global_lock: Acquired hardware Global Lock
+[    1.522818]   evglock-0251 ev_acquire_global_lock: ----Exit- AE_OK
+[    1.524123]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.525132]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 00000000FED00000 [SystemMemory]
+[    1.527019]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.527981]   evglock-0271 ev_release_global_lock: ----Entry
+[    1.528923]   evglock-0298 ev_release_global_lock: Released hardware Global Lock
+[    1.530160]   evglock-0307 ev_release_global_lock: ----Exit- AE_OK
+[    1.531229]   evglock-0176 ev_acquire_global_lock: ----Entry
+[    1.532162]   evglock-0220 ev_acquire_global_lock: Acquired hardware Global Lock
+[    1.533450]   evglock-0251 ev_acquire_global_lock: ----Exit- AE_OK
+[    1.534438]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.535333]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 00000000FED00004 [SystemMemory]
+[    1.537202]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.538161]   evglock-0271 ev_release_global_lock: ----Entry
+[    1.539064]   evglock-0298 ev_release_global_lock: Released hardware Global Lock
+[    1.540300]   evglock-0307 ev_release_global_lock: ----Exit- AE_OK
+[    1.541442]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.542364]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000060 [PCI_Config]
+[    1.544188]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.545212]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.546115]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000061 [PCI_Config]
+[    1.547953]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.548991]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.549903]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000062 [PCI_Config]
+[    1.551713]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.552754]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.553655]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000063 [PCI_Config]
+[    1.556076]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.557352]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.558277]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000068 [PCI_Config]
+[    1.560131]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.561168]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.562080]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 0000000000000069 [PCI_Config]
+[    1.563916]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.565037]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.566160]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 000000000000006A [PCI_Config]
+[    1.568153]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.569193]  evregion-0116 ev_address_space_dispa: ----Entry
+[    1.570113]  evregion-0241 ev_address_space_dispa: Handler (____ptrval____) (@(____ptrval____)) Address 000000000000006B [PCI_Config]
+[    1.572223]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[    1.573353] pnp: PnP ACPI: found 5 devices
+[    1.582382] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    1.584069] pci 0000:00:06.0: PCI bridge to [bus 01]
+[    1.586033] pci 0000:00:06.0:   bridge window [mem 0xfe800000-0xfe9fffff]
+[    1.588162] pci 0000:00:06.0:   bridge window [mem 0xfe200000-0xfe3fffff 64bit pref]
+[    1.590614] pci 0000:00:07.0: PCI bridge to [bus 02]
+[    1.592327] pci 0000:00:07.0:   bridge window [mem 0xfe600000-0xfe7fffff]
+[    1.593918] pci 0000:00:07.0:   bridge window [mem 0xfe000000-0xfe1fffff 64bit pref]
+[    1.596052] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    1.597419] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    1.598391] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    1.599452] pci_bus 0000:00: resource 7 [mem 0x80000000-0xafffffff window]
+[    1.600501] pci_bus 0000:00: resource 8 [mem 0xc0000000-0xfebfffff window]
+[    1.601543] pci_bus 0000:00: resource 9 [mem 0x280000000-0xa7fffffff window]
+[    1.602649] pci_bus 0000:01: resource 1 [mem 0xfe800000-0xfe9fffff]
+[    1.603684] pci_bus 0000:01: resource 2 [mem 0xfe200000-0xfe3fffff 64bit pref]
+[    1.605068] pci_bus 0000:02: resource 1 [mem 0xfe600000-0xfe7fffff]
+[    1.606095] pci_bus 0000:02: resource 2 [mem 0xfe000000-0xfe1fffff 64bit pref]
+[    1.607702] NET: Registered protocol family 2
+[    1.608854] tcp_listen_portaddr_hash hash table entries: 4096 (order: 6, 360448 bytes, linear)
+[    1.610344] TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    1.612267] TCP bind hash table entries: 65536 (order: 10, 5242880 bytes, vmalloc)
+[    1.614864] TCP: Hash tables configured (established 65536 bind 65536)
+[    1.616022] UDP hash table entries: 4096 (order: 7, 786432 bytes, linear)
+[    1.617844] UDP-Lite hash table entries: 4096 (order: 7, 786432 bytes, linear)
+[    1.619591] NET: Registered protocol family 1
+[    1.620344] NET: Registered protocol family 44
+[    1.621141] pci 0000:00:01.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    1.622830] PCI: CLS 0 bytes, default 64
+[    1.623975] Trying to unpack rootfs image as initramfs...
+[    1.999055] Freeing initrd memory: 39988K
+[    1.999859] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    2.000882] software IO TLB: mapped [mem 0x7bfdf000-0x7ffdf000] (64MB)
+[    2.001949] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x1e717e40680, max_idle_ns: 440795297614 ns
+[    2.003892] check: Scanning for low memory corruption every 60 seconds
+[    2.005665] Initialise system trusted keyrings
+[    2.006471] Key type blacklist registered
+[    2.007253] workingset: timestamp_bits=36 max_order=21 bucket_order=0
+[    2.013909] zbud: loaded
+[    2.016166] Platform Keyring initialized
+[    2.019057] NET: Registered protocol family 38
+[    2.019874] Key type asymmetric registered
+[    2.020622] Asymmetric key parser 'x509' registered
+[    2.021487] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    2.022932] io scheduler mq-deadline registered
+[    2.023707] io scheduler kyber registered
+[    2.024488] io scheduler bfq registered
+[    2.025710] atomic64_test: passed for x86-64 platform with CX8 and with SSE
+[    2.026991] pcieport 0000:00:06.0: PCI->APIC IRQ transform: INT A -> IRQ 11
+[    2.029087] pcieport 0000:00:06.0: PME: Signaling with IRQ 24
+[    2.030286] pcieport 0000:00:06.0: AER: enabled with IRQ 24
+[    2.031469] pcieport 0000:00:07.0: PCI->APIC IRQ transform: INT A -> IRQ 11
+[    2.033481] pcieport 0000:00:07.0: PME: Signaling with IRQ 25
+[    2.034634] pcieport 0000:00:07.0: AER: enabled with IRQ 25
+[    2.035858] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    2.037173] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    2.038716] ACPI: Power Button [PWRF]
+[    2.039362]   evxface-0589 install_fixed_event_ha: ----Entry
+[    2.040256]  evxfevnt-0269 clear_event           : ----Entry
+[    2.041157]  evxfevnt-0291 clear_event           : ----Exit- AE_OK
+[    2.042112]  evxfevnt-0147 enable_event          : ----Entry
+[    2.043013]  evxfevnt-0188 enable_event          : ----Exit- AE_OK
+[    2.043969]   evxface-0627 install_fixed_event_ha: Enabled fixed event PowerButton (2), Handler=(____ptrval____)
+[    2.045581]   evxface-0635 install_fixed_event_ha: ----Exit- AE_OK
+[    2.046671]   evxface-0068 install_notify_handler: ----Entry
+[    2.047563]   evxface-0189 install_notify_handler: ----Exit- AE_OK
+[    2.049030] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    2.050187] 00:03: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    2.056446] Non-volatile memory driver v1.3
+[    2.057284] Linux agpgart interface v0.103
+[    2.058719] ahci 0000:00:1f.2: version 3.0
+[    2.058745] ahci 0000:00:1f.2: PCI->APIC IRQ transform: INT A -> IRQ 10
+[    2.060245] ahci 0000:00:1f.2: AHCI 0001.0000 32 slots 6 ports 1.5 Gbps 0x3f impl SATA mode
+[    2.061625] ahci 0000:00:1f.2: flags: 64bit ncq only 
+[    2.064183] scsi host0: ahci
+[    2.065112] scsi host1: ahci
+[    2.065915] scsi host2: ahci
+[    2.066696] scsi host3: ahci
+[    2.067455] scsi host4: ahci
+[    2.068227] scsi host5: ahci
+[    2.068951] ata1: SATA max UDMA/133 abar m4096@0xfea97000 port 0xfea97100 irq 26
+[    2.070224] ata2: SATA max UDMA/133 abar m4096@0xfea97000 port 0xfea97180 irq 26
+[    2.071518] ata3: SATA max UDMA/133 abar m4096@0xfea97000 port 0xfea97200 irq 26
+[    2.073920] ata4: SATA max UDMA/133 abar m4096@0xfea97000 port 0xfea97280 irq 26
+[    2.075161] ata5: SATA max UDMA/133 abar m4096@0xfea97000 port 0xfea97300 irq 26
+[    2.076416] ata6: SATA max UDMA/133 abar m4096@0xfea97000 port 0xfea97380 irq 26
+[    2.078520] libphy: Fixed MDIO Bus: probed
+[    2.079806] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.080865] ehci-pci: EHCI PCI platform driver
+[    2.081675] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.082872] ohci-pci: OHCI PCI platform driver
+[    2.083660] uhci_hcd: USB Universal Host Controller Interface driver
+[    2.084901] usbcore: registered new interface driver usbserial_generic
+[    2.085999] usbserial: USB Serial support registered for generic
+[    2.087007] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    2.089045] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    2.090051] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    2.091164] mousedev: PS/2 mouse device common for all mice
+[    2.092567] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+[    2.095230] input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input4
+[    2.096855]   evxface-0589 install_fixed_event_ha: ----Entry
+[    2.098076]  evxfevnt-0269 clear_event           : ----Entry
+[    2.099292]  evxfevnt-0291 clear_event           : ----Exit- AE_OK
+[    2.100630]  evxfevnt-0147 enable_event          : ----Entry
+[    2.101894]  evxfevnt-0188 enable_event          : ----Exit- AE_OK
+[    2.103044]   evxface-0627 install_fixed_event_ha: Enabled fixed event RealTimeClock (4), Handler=(____ptrval____)
+[    2.105254]   evxface-0635 install_fixed_event_ha: ----Exit- AE_OK
+[    2.106355]  evxfevnt-0269 clear_event           : ----Entry
+[    2.107338]  evxfevnt-0291 clear_event           : ----Exit- AE_OK
+[    2.108342]  evxfevnt-0210 disable_event         : ----Entry
+[    2.109253]  evxfevnt-0249 disable_event         : ----Exit- AE_OK
+[    2.110213] rtc_cmos 00:04: RTC can wake from S4
+[    2.111362] input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input3
+[    2.113479] rtc_cmos 00:04: registered as rtc0
+[    2.114238] rtc_cmos 00:04: alarms up to one day, y3k, 242 bytes nvram, hpet irqs
+[    2.115639] device-mapper: uevent: version 1.0.3
+[    2.116675] device-mapper: ioctl: 4.42.0-ioctl (2020-02-27) initialised: dm-devel@redhat.com
+[    2.118231] intel_pstate: CPU model not supported
+[    2.119217] hid: raw HID events driver (C) Jiri Kosina
+[    2.120164] usbcore: registered new interface driver usbhid
+[    2.121092] usbhid: USB HID core driver
+[    2.121940] drop_monitor: Initializing network drop monitor service
+[    2.123012] Initializing XFRM netlink socket
+[    2.124005] NET: Registered protocol family 10
+[    2.130774] Segment Routing with IPv6
+[    2.131510] mip6: Mobile IPv6
+[    2.132112] NET: Registered protocol family 17
+[    2.133346] RAS: Correctable Errors collector initialized.
+[    2.134275] IPI shorthand broadcast: enabled
+[    2.135060] sched_clock: Marking stable (1982320348, 152689728)->(2324346229, -189336153)
+[    2.136653] registered taskstats version 1
+[    2.137378] Loading compiled-in X.509 certificates
+[    2.159133] Loaded X.509 cert 'Fedora kernel signing key: e710d3b0df53e69507488931c9947a3dd8fa4f24'
+[    2.160726] zswap: loaded using pool lzo/zbud
+[    2.161796] Key type ._fscrypt registered
+[    2.162506] Key type .fscrypt registered
+[    2.163207] Key type fscrypt-provisioning registered
+[    2.169389] Key type big_key registered
+[    2.174719] Key type encrypted registered
+[    2.175506] ima: No TPM chip found, activating TPM-bypass!
+[    2.176523] ima: Allocated hash algorithm: sha256
+[    2.177346] ima: No architecture policies found
+[    2.178784] PM:   Magic number: 8:452:840
+[    2.179596] rtc_cmos 00:04: setting system clock to 2020-06-29T14:48:37 UTC (1593442117)
+[    2.386122] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+[    2.391567] ata5: SATA link down (SStatus 0 SControl 300)
+[    2.396166] ata4: SATA link down (SStatus 0 SControl 300)
+[    2.400925] ata6: SATA link down (SStatus 0 SControl 300)
+[    2.405525] ata2: SATA link down (SStatus 0 SControl 300)
+[    2.409976] ata3: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+[    2.413688] ata3.00: ATAPI: QEMU DVD-ROM, 2.5+, max UDMA/100
+[    2.416504] ata3.00: applying bridge limits
+[    2.418298] ata1.00: ATA-7: QEMU HARDDISK, 2.5+, max UDMA/100
+[    2.420421] ata1.00: 8388608 sectors, multi 16: LBA48 NCQ (depth 32)
+[    2.422443] ata1.00: applying bridge limits
+[    2.424001] ata3.00: configured for UDMA/100
+[    2.425768] ata1.00: configured for UDMA/100
+[    2.427789] scsi 0:0:0:0: Direct-Access     ATA      QEMU HARDDISK    2.5+ PQ: 0 ANSI: 5
+[    2.430831] sd 0:0:0:0: [sda] 8388608 512-byte logical blocks: (4.29 GB/4.00 GiB)
+[    2.432799] sd 0:0:0:0: [sda] Write Protect is off
+[    2.433886] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    2.434176] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    2.435559] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    2.437711] scsi 2:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.5+ PQ: 0 ANSI: 5
+[    2.441439]  sda: sda1
+[    2.442851] sd 0:0:0:0: [sda] Attached SCSI disk
+[    2.453944] sr 2:0:0:0: [sr0] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray
+[    2.455166] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    2.457040] sr 2:0:0:0: Attached scsi CD-ROM sr0
+[    2.457190] sr 2:0:0:0: Attached scsi generic sg1 type 5
+[    2.461390] Freeing unused decrypted memory: 2040K
+[    2.464058] Freeing unused kernel image (initmem) memory: 4272K
+[    2.467644] Write protecting the kernel read-only data: 26624k
+[    2.470574] Freeing unused kernel image (text/rodata gap) memory: 2040K
+[    2.472886] Freeing unused kernel image (rodata/data gap) memory: 1752K
+[    2.514915] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    2.516320] rodata_test: all tests were successful
+[    2.517503] x86/mm: Checking user space page tables
+[    2.559730] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    2.560813] Run /init as init process
+[    2.561475]   with arguments:
+[    2.561477]     /init
+[    2.561478]   with environment:
+[    2.561479]     HOME=/
+[    2.561480]     TERM=linux
+[    2.561481]     BOOT_IMAGE=(hd0,msdos1)/boot/vmlinuz-5.6.19-200.fc31.x86_64+debug
+[    2.561483]     pci_ports=native
+[    2.579707] systemd[1]: systemd v243-4.gitef67743.fc31 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=unified)
+[    2.584544] systemd[1]: Detected virtualization kvm.
+[    2.585422] systemd[1]: Detected architecture x86-64.
+[    2.586563] systemd[1]: Running in initial RAM disk.
+[    2.589446] systemd[1]: No hostname configured.
+[    2.590252] systemd[1]: Set hostname to <localhost>.
+[    2.591219] random: systemd: uninitialized urandom read (16 bytes read)
+[    2.592267] systemd[1]: Initializing machine ID from random generator.
+[    2.712074] random: systemd: uninitialized urandom read (16 bytes read)
+[    2.713384] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[    2.716006] random: systemd: uninitialized urandom read (16 bytes read)
+[    2.717100] systemd[1]: Reached target Local Encrypted Volumes.
+[    2.720470] systemd[1]: Reached target Local File Systems.
+[    2.879007] random: fast init done
+[    3.426618] audit: type=1130 audit(1593442118.745:2): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    3.467095] audit: type=1130 audit(1593442118.786:3): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-tmpfiles-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    3.561688] audit: type=1130 audit(1593442118.879:4): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udevd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    3.899490] 
+               **** Context Switch from TID 3068198912 to TID 2930016256 ****
+
+[    3.901304]   evxface-0068 install_notify_handler: ----Entry
+[    3.905939] audit: type=1130 audit(1593442119.225:5): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    3.944025]   evxface-0189 install_notify_handler: ----Exit- AE_OK
+[    3.968768]   evglock-0176 ev_acquire_global_lock: ----Entry
+[    3.969806]   evglock-0220 ev_acquire_global_lock: Acquired hardware Global Lock
+[    3.971119]   evglock-0251 ev_acquire_global_lock: ----Exit- AE_OK
+[    3.999197]   evglock-0271 ev_release_global_lock: ----Entry
+[    4.000200]   evglock-0298 ev_release_global_lock: Released hardware Global Lock
+[    4.001478]   evglock-0307 ev_release_global_lock: ----Exit- AE_OK
+[    4.002437]   evglock-0176 ev_acquire_global_lock: ----Entry
+[    4.003332]   evglock-0220 ev_acquire_global_lock: Acquired hardware Global Lock
+[    4.005333]   evglock-0251 ev_acquire_global_lock: ----Exit- AE_OK
+[    4.115662]   evglock-0271 ev_release_global_lock: ----Entry
+[    4.116691]   evglock-0298 ev_release_global_lock: Released hardware Global Lock
+[    4.117982]   evglock-0307 ev_release_global_lock: ----Exit- AE_OK
+[    4.151663]   evglock-0176 ev_acquire_global_lock: ----Entry
+[    4.153036]   evglock-0220 ev_acquire_global_lock: Acquired hardware Global Lock
+[    4.154317]   evglock-0251 ev_acquire_global_lock: ----Exit- AE_OK
+[    4.192797]   evglock-0271 ev_release_global_lock: ----Entry
+[    4.193812]   evglock-0298 ev_release_global_lock: Released hardware Global Lock
+[    4.195117]   evglock-0307 ev_release_global_lock: ----Exit- AE_OK
+[    4.227066] ata_id (264) used greatest stack depth: 12528 bytes left
+[    4.249241]   evglock-0176 ev_acquire_global_lock: ----Entry
+[    4.250520]   evglock-0220 ev_acquire_global_lock: Acquired hardware Global Lock
+[    4.252167]   evglock-0251 ev_acquire_global_lock: ----Exit- AE_OK
+[    4.275836]   evglock-0271 ev_release_global_lock: ----Entry
+[    4.277138]   evglock-0298 ev_release_global_lock: Released hardware Global Lock
+[    4.278820]   evglock-0307 ev_release_global_lock: ----Exit- AE_OK
+[    4.352046] audit: type=1130 audit(1593442119.672:6): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=dracut-initqueue comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    4.413523] audit: type=1130 audit(1593442119.733:7): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=kernel msg='unit=systemd-fsck-root comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    4.447215] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+[    4.472280] audit: type=1334 audit(1593442119.791:8): prog-id=7 op=UNLOAD
+[    4.473560] audit: type=1334 audit(1593442119.793:9): prog-id=6 op=UNLOAD
+[    4.475525] audit: type=1334 audit(1593442119.795:10): prog-id=5 op=UNLOAD
+[    4.534251] systemd-fstab-g (277) used greatest stack depth: 12168 bytes left
+[    4.862667] systemd-journald[167]: Received SIGTERM from PID 1 (systemd).
+[    4.961252] printk: systemd: 27 output lines suppressed due to ratelimiting
+[    5.684529] SELinux:  Permission watch in class filesystem not defined in policy.
+[    5.686181] SELinux:  Permission watch in class file not defined in policy.
+[    5.687287] SELinux:  Permission watch_mount in class file not defined in policy.
+[    5.688595] SELinux:  Permission watch_sb in class file not defined in policy.
+[    5.689817] SELinux:  Permission watch_with_perm in class file not defined in policy.
+[    5.691110] SELinux:  Permission watch_reads in class file not defined in policy.
+[    5.692361] SELinux:  Permission watch in class dir not defined in policy.
+[    5.693415] SELinux:  Permission watch_mount in class dir not defined in policy.
+[    5.694660] SELinux:  Permission watch_sb in class dir not defined in policy.
+[    5.695737] SELinux:  Permission watch_with_perm in class dir not defined in policy.
+[    5.697056] SELinux:  Permission watch_reads in class dir not defined in policy.
+[    5.698311] SELinux:  Permission watch in class lnk_file not defined in policy.
+[    5.699561] SELinux:  Permission watch_mount in class lnk_file not defined in policy.
+[    5.700861] SELinux:  Permission watch_sb in class lnk_file not defined in policy.
+[    5.702126] SELinux:  Permission watch_with_perm in class lnk_file not defined in policy.
+[    5.703463] SELinux:  Permission watch_reads in class lnk_file not defined in policy.
+[    5.704759] SELinux:  Permission watch in class chr_file not defined in policy.
+[    5.705988] SELinux:  Permission watch_mount in class chr_file not defined in policy.
+[    5.707277] SELinux:  Permission watch_sb in class chr_file not defined in policy.
+[    5.708537] SELinux:  Permission watch_with_perm in class chr_file not defined in policy.
+[    5.709881] SELinux:  Permission watch_reads in class chr_file not defined in policy.
+[    5.711171] SELinux:  Permission watch in class blk_file not defined in policy.
+[    5.712394] SELinux:  Permission watch_mount in class blk_file not defined in policy.
+[    5.713694] SELinux:  Permission watch_sb in class blk_file not defined in policy.
+[    5.714950] SELinux:  Permission watch_with_perm in class blk_file not defined in policy.
+[    5.716336] SELinux:  Permission watch_reads in class blk_file not defined in policy.
+[    5.717676] SELinux:  Permission watch in class sock_file not defined in policy.
+[    5.718929] SELinux:  Permission watch_mount in class sock_file not defined in policy.
+[    5.720242] SELinux:  Permission watch_sb in class sock_file not defined in policy.
+[    5.721612] SELinux:  Permission watch_with_perm in class sock_file not defined in policy.
+[    5.722988] SELinux:  Permission watch_reads in class sock_file not defined in policy.
+[    5.724294] SELinux:  Permission watch in class fifo_file not defined in policy.
+[    5.725546] SELinux:  Permission watch_mount in class fifo_file not defined in policy.
+[    5.726849] SELinux:  Permission watch_sb in class fifo_file not defined in policy.
+[    5.728119] SELinux:  Permission watch_with_perm in class fifo_file not defined in policy.
+[    5.729472] SELinux:  Permission watch_reads in class fifo_file not defined in policy.
+[    5.730894] SELinux:  Class perf_event not defined in policy.
+[    5.731804] SELinux:  Class lockdown not defined in policy.
+[    5.732830] SELinux: the above unknown classes and permissions will be allowed
+[    5.734181] SELinux:  policy capability network_peer_controls=1
+[    5.735115] SELinux:  policy capability open_perms=1
+[    5.735929] SELinux:  policy capability extended_socket_class=1
+[    5.736858] SELinux:  policy capability always_check_network=0
+[    5.737787] SELinux:  policy capability cgroup_seclabel=1
+[    5.738653] SELinux:  policy capability nnp_nosuid_transition=1
+[    5.801376] kauditd_printk_skb: 29 callbacks suppressed
+[    5.801378] audit: type=1403 audit(1593442121.120:40): auid=4294967295 ses=4294967295 lsm=selinux res=1
+[    5.808250] systemd[1]: Successfully loaded SELinux policy in 740.462ms.
+[    5.871406] systemd[1]: Relabelled /dev, /dev/shm, /run, /sys/fs/cgroup in 33.306ms.
+[    5.877184] systemd[1]: systemd v243-4.gitef67743.fc31 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=unified)
+[    5.880805] systemd[1]: Detected virtualization kvm.
+[    5.881679] systemd[1]: Detected architecture x86-64.
+[    5.885638] systemd[1]: Set hostname to <localhost>.
+[    5.893032] audit: type=1334 audit(1593442121.212:41): prog-id=13 op=LOAD
+[    5.894213] audit: type=1334 audit(1593442121.214:42): prog-id=13 op=UNLOAD
+[    5.895600] audit: type=1334 audit(1593442121.215:43): prog-id=14 op=LOAD
+[    5.897625] audit: type=1334 audit(1593442121.215:44): prog-id=14 op=UNLOAD
+[    6.127442] systemd[1]: /usr/lib/systemd/system/sssd.service:12: PIDFile= references a path below legacy directory /var/run/, updating /var/run/sssd.pid → /run/sssd.pid; please update the unit file accordingly.
+[    6.171427] systemd[1]: /usr/lib/systemd/system/sssd-kcm.socket:7: ListenStream= references a path below legacy directory /var/run/, updating /var/run/.heim_org.h5l.kcm-socket → /run/.heim_org.h5l.kcm-socket; please update the unit file accordingly.
+[    6.209123] audit: type=1334 audit(1593442121.528:45): prog-id=15 op=LOAD
+[    6.210519] audit: type=1334 audit(1593442121.530:46): prog-id=16 op=LOAD
+[    6.211688] audit: type=1334 audit(1593442121.532:47): prog-id=17 op=LOAD
+[    6.215505] audit: type=1131 audit(1593442121.534:48): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    6.222454] systemd[1]: initrd-switch-root.service: Succeeded.
+[    6.224233] audit: type=1334 audit(1593442121.540:49): prog-id=15 op=UNLOAD
+[    6.227056] systemd[1]: Stopped Switch Root.
+[    6.230264] systemd[1]: systemd-journald.service: Service has no hold-off time (RestartSec=0), scheduling restart.
+[    6.232505] systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 1.
+[    6.351521] random: crng init done
+[    6.352234] random: 7 urandom warning(s) missed due to ratelimiting
+[    6.395242] EXT4-fs (sda1): re-mounted. Opts: (null)
+[    7.188168] systemd-journald[331]: Received client request to flush runtime journal.
+[    7.968309] parport_pc 00:02: reported by Plug and Play ACPI
+[    7.995650] parport0: PC-style at 0x378, irq 7 [PCSPP,TRISTATE]
+[    8.308208] lpc_ich 0000:00:1f.0: I/O space for GPIO uninitialized
+[    8.446817] i801_smbus 0000:00:1f.3: PCI->APIC IRQ transform: INT A -> IRQ 10
+[    8.448020] 
+               **** Context Switch from TID 2930016256 to TID 3006955520 ****
+
+[    8.449764]  evxfregn-0051 install_address_space_: ----Entry
+[    8.450683] evhandler-0339 ev_install_space_handl: ----Entry
+[    8.451587] evhandler-0471 ev_install_space_handl: Installing address handler for region SystemIO(1) on Device SMB0 00000000c468ab5e(00000000fc2928b6)
+[    8.873094] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    8.874134] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    8.896085] evhandler-0526 ev_install_space_handl: ----Exit- AE_OK
+[    8.897149]  evregion-0654 ev_execute_reg_methods: ----Entry
+[    8.898084]  evregion-0666 ev_execute_reg_methods: ----Exit-
+[    8.899008]  evxfregn-0087 install_address_space_: ----Exit- AE_OK
+[    9.003510] e1000e 0000:00:02.0: PCI->APIC IRQ transform: INT A -> IRQ 11
+[    9.041500] e1000e 0000:00:02.0: Interrupt Throttling Rate (ints/sec) set to dynamic conservative mode
+[    9.084704] i801_smbus 0000:00:1f.3: SMBus using PCI interrupt
+[    9.147939]  evxfregn-0051 install_address_space_: ----Entry
+[    9.148968] evhandler-0339 ev_install_space_handl: ----Entry
+[    9.149916] evhandler-0471 ev_install_space_handl: Installing address handler for region GenericSerialBus(9) on Device SMB0 00000000c468ab5e(00000000fc2928b6)
+[    9.228618] e1000e 0000:00:02.0 0000:00:02.0 (uninitialized): registered PHC clock
+[    9.301604] evhandler-0526 ev_install_space_handl: ----Exit- AE_OK
+[    9.302664]  evregion-0654 ev_execute_reg_methods: ----Entry
+[    9.303600]     Running _REG methods for SpaceId GenericSerialBus
+[    9.304545]     Executed 0 _REG methods for SpaceId GenericSerialBus
+[    9.305525]  evregion-0698 ev_execute_reg_methods: ----Exit-
+[    9.306429]  evxfregn-0087 install_address_space_: ----Exit- AE_OK
+[    9.479048] e1000e 0000:00:02.0 eth0: (PCI Express:2.5GT/s:Width x1) 52:54:00:12:34:56
+[    9.480463] e1000e 0000:00:02.0 eth0: Intel(R) PRO/1000 Network Connection
+[    9.481550] e1000e 0000:00:02.0 eth0: MAC: 3, PHY: 8, PBA No: 000000-000
+[    9.530330] ppdev: user-space parallel port driver
+[    9.553428] iTCO_vendor_support: vendor-support=0
+[    9.615973] iTCO_wdt: Intel TCO WatchDog Timer Driver v1.11
+[    9.634658] iTCO_wdt: Found a ICH9 TCO device (Version=2, TCOBASE=0x0660)
+[    9.648778] iTCO_wdt: initialized. heartbeat=30 sec (nowayout=0)
+[    9.764648] bochs-drm 0000:00:01.0: vgaarb: deactivate vga console
+[    9.907404] Console: switching to colour dummy device 80x25
+[    9.913799] [drm] Found bochs VGA, ID 0xb0c0.
+[    9.914311] [drm] Framebuffer size 16384 kB @ 0xfd000000, mmio @ 0xfea94000.
+[    9.924709] [TTM] Zone  kernel: Available graphics memory: 4061522 KiB
+[    9.925492] [TTM] Zone   dma32: Available graphics memory: 2097152 KiB
+[    9.926236] [TTM] Initializing pool allocator
+[    9.933611] [TTM] Initializing DMA pool allocator
+[    9.938849] [drm] Found EDID data blob.
+[    9.951920] [drm] Initialized bochs-drm 1.0.0 20130925 for 0000:00:01.0 on minor 0
+[    9.970947] fbcon: bochs-drmdrmfb (fb0) is primary device
+[    9.979616] Console: switching to colour frame buffer device 128x48
+[    9.999530] bochs-drm 0000:00:01.0: fb0: bochs-drmdrmfb frame buffer device
+[   12.268544] e1000e 0000:00:02.0 eth0: NIC Link is Up 1000 Mbps Full Duplex, Flow Control: Rx/Tx
+[   12.283118] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   15.018671] systemd-udevd (353) used greatest stack depth: 12080 bytes left
