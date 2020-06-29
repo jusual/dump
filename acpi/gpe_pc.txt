@@ -1,0 +1,100 @@
+[  338.520304]  nssearch-0368 ns_search_and_enter   : ----Exit- ****Exception****: AE_NOT_FOUND
+[  338.521961]  nsaccess-0606 ns_lookup             : Name [_OST] not found in scope [S00_] 00000000534b1b4a
+[  338.523723]  nsaccess-0645 ns_lookup             : ----Exit- ****Exception****: AE_NOT_FOUND
+[  338.525333]   nsutils-0682 ns_get_node_unlocked  : _OST, AE_NOT_FOUND
+[  338.526669]   nsutils-0687 ns_get_node_unlocked  : ----Exit- ****Exception****: AE_NOT_FOUND
+[  338.528284]   utmutex-0277 ut_release_mutex      : Thread 1994653696 releasing Mutex [ACPI_MTX_Namespace]
+[  338.530044]       osl-1296 os_signal_semaphore   : Signaling semaphore[00000000cb35a022|1]
+[  338.531711]   nsutils-0730 ns_get_node           : ----Exit- ****Exception****: AE_NOT_FOUND
+[  338.533363]    nseval-0065 ns_evaluate           : ----Exit- ****Exception****: AE_NOT_FOUND
+[  338.535851] acpi_ut_remove_reference: Obj 000000008f688839 Current Refs=1 [To Be Decremented]
+[  338.537531] acpi_ut_update_ref_count: Obj 000000008f688839 Type 01 Refs 00 [Decremented]
+[  338.539357]  utdelete-0045 ut_delete_internal_obj: ----Entry 000000008f688839
+[  338.540901]  utdecode-0203 ut_get_object_type_nam: ----Entry
+[  338.542668]  utdecode-0223 ut_get_object_type_nam: ----Exit- Integer
+[  338.544829] acpi_ut_delete_internal_obj: Deleting Object 000000008f688839 [Integer]
+[  338.546952]  utobject-0391 ut_delete_object_desc : ----Entry 000000008f688839
+[  338.548921]  utobject-0403 ut_delete_object_desc : ----Exit-
+[  338.550736]  utdelete-0309 ut_delete_internal_obj: ----Exit-
+[  338.552582] acpi_ut_remove_reference: Obj 00000000b2b4b771 Current Refs=1 [To Be Decremented]
+[  338.554591] acpi_ut_update_ref_count: Obj 00000000b2b4b771 Type 01 Refs 00 [Decremented]
+[  338.556849]  utdelete-0045 ut_delete_internal_obj: ----Entry 00000000b2b4b771
+[  338.558457]  utdecode-0203 ut_get_object_type_nam: ----Entry
+[  338.559827]  utdecode-0223 ut_get_object_type_nam: ----Exit- Integer
+[  338.561272] acpi_ut_delete_internal_obj: Deleting Object 00000000b2b4b771 [Integer]
+[  338.562897]  utobject-0391 ut_delete_object_desc : ----Entry 00000000b2b4b771
+[  338.564504]  utobject-0403 ut_delete_object_desc : ----Exit-
+[  338.565834]  utdelete-0309 ut_delete_internal_obj: ----Exit-
+[  338.567162] acpi_ut_remove_reference: Obj 000000000b50435f Current Refs=1 [To Be Decremented]
+[  338.568880] acpi_ut_update_ref_count: Obj 000000000b50435f Type 03 Refs 00 [Decremented]
+[  338.570557]  utdelete-0045 ut_delete_internal_obj: ----Entry 000000000b50435f
+[  338.572160]  utdelete-0074 ut_delete_internal_obj: **** Buffer 000000000b50435f, ptr 000000000bb4bdbc
+[  338.574009]  utdelete-0296 ut_delete_internal_obj: Deleting Object Subptr 000000000bb4bdbc
+[  338.575711]  utdecode-0203 ut_get_object_type_nam: ----Entry
+[  338.577082]  utdecode-0223 ut_get_object_type_nam: ----Exit- Buffer
+[  338.578489] acpi_ut_delete_internal_obj: Deleting Object 000000000b50435f [Buffer]
+[  338.580107]  utobject-0391 ut_delete_object_desc : ----Entry 000000000b50435f
+[  338.581640]  utobject-0403 ut_delete_object_desc : ----Exit-
+[  338.582978]  utdelete-0309 ut_delete_internal_obj: ----Exit-
+[  338.584326]  nsxfeval-0447 evaluate_object       : ----Exit- ****Exception****: AE_NOT_FOUND
+[  638.875984] kworker/dying (99) used greatest stack depth: 11984 bytes left
+[  710.311186] 
+               **** Context Switch from TID 1994653696 to TID 2191640768 ****
+
+[  710.320354]     evsci-0081 ev_sci_xrupt_handler  : ----Entry
+[  710.326669]   evevent-0188 ev_fixed_event_detect : Fixed Event Block: Enable 00000120 Status 00000001
+[  710.335481]     evgpe-0639 ev_detect_gpe         : ----Entry
+[  710.340288]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 00: Status=00, Enable=00, RunEnable=06, WakeEnable=00
+[  710.347292]     evgpe-0639 ev_detect_gpe         : ----Entry
+[  710.350074]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 01: Status=02, Enable=02, RunEnable=06, WakeEnable=00
+[  710.354835]     evgpe-0754 ev_gpe_dispatch       : ----Entry
+[  710.356564]     evgpe-0846 ev_gpe_dispatch       : ----Exit- 0000000000000001
+[  710.358299]     evgpe-0639 ev_detect_gpe         : ----Entry
+[  710.359694]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 02: Status=00, Enable=04, RunEnable=06, WakeEnable=00
+[  710.362175]     evgpe-0639 ev_detect_gpe         : ----Entry
+[  710.363350]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 03: Status=00, Enable=00, RunEnable=06, WakeEnable=00
+[  710.365694]     evgpe-0639 ev_detect_gpe         : ----Entry
+[  710.366847]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 04: Status=00, Enable=00, RunEnable=06, WakeEnable=00
+[  710.369175]     evgpe-0639 ev_detect_gpe         : ----Entry
+[  710.370345]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 05: Status=00, Enable=00, RunEnable=06, WakeEnable=00
+[  710.372582]     evgpe-0639 ev_detect_gpe         : ----Entry
+[  710.373734]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 06: Status=00, Enable=00, RunEnable=06, WakeEnable=00
+[  710.376030]     evgpe-0639 ev_detect_gpe         : ----Entry
+[  710.377220]     evgpe-0673 ev_detect_gpe         : Read registers for GPE 07: Status=00, Enable=00, RunEnable=06, WakeEnable=00
+[  710.379573]     evgpe-0396 ev_gpe_detect         : Ignore disabled registers for GPE 08-0F: RunEnable=00, WakeEnable=00
+[  710.381576]     evsci-0105 ev_sci_xrupt_handler  : ----Exit- 0000000000000001
+[  710.386642] 
+               **** Context Switch from TID 2191640768 to TID 1994620928 ****
+
+[  710.391153]     evgpe-0462 ev_asynch_execute_gpe_: ----Entry
+[  710.393132]  evregion-0116 ev_address_space_dispa: ----Entry
+[  710.394391]  evregion-0241 ev_address_space_dispa: Handler 00000000f819e6f8 (@00000000572b3f82) Address 000000000000AE10 [SystemIO]
+[  710.396873]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[  710.398481]  evregion-0116 ev_address_space_dispa: ----Entry
+[  710.399739]  evregion-0241 ev_address_space_dispa: Handler 00000000f819e6f8 (@00000000572b3f82) Address 000000000000AE00 [SystemIO]
+[  710.402387]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[  710.404326]  evregion-0116 ev_address_space_dispa: ----Entry
+[  710.405623]  evregion-0241 ev_address_space_dispa: Handler 00000000f819e6f8 (@00000000572b3f82) Address 000000000000AE04 [SystemIO]
+[  710.408215]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[  710.410074]  evregion-0116 ev_address_space_dispa: ----Entry
+[  710.411374]  evregion-0241 ev_address_space_dispa: Handler 00000000f819e6f8 (@00000000572b3f82) Address 000000000000AE10 [SystemIO]
+[  710.413993]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[  710.415535]  evregion-0116 ev_address_space_dispa: ----Entry
+[  710.416821]  evregion-0241 ev_address_space_dispa: Handler 00000000f819e6f8 (@00000000572b3f82) Address 000000000000AE00 [SystemIO]
+[  710.419422]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[  710.421304]  evregion-0116 ev_address_space_dispa: ----Entry
+[  710.422580]  evregion-0241 ev_address_space_dispa: Handler 00000000f819e6f8 (@00000000572b3f82) Address 000000000000AE04 [SystemIO]
+[  710.425139]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[  710.426713]    evmisc-0132 ev_queue_notify_reques: Dispatching Notify on [S00_] (Device) Value 0x03 (Eject Request) Node 00000000534b1b4a
+[  710.429846]     evgpe-0529 ev_asynch_execute_gpe_: ----Exit-
+[  710.440730] 
+               **** Context Switch from TID 1994620928 to TID 1975857728 ****
+
+[  710.444280]   evxface-0222 remove_notify_handler : ----Entry
+[  710.446091]   evxface-0324 remove_notify_handler : ----Exit- AE_OK
+[  710.449708]  evregion-0116 ev_address_space_dispa: ----Entry
+[  710.451537]  evregion-0241 ev_address_space_dispa: Handler 00000000f819e6f8 (@00000000572b3f82) Address 000000000000AE10 [SystemIO]
+[  710.454229]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
+[  710.456843]  evregion-0116 ev_address_space_dispa: ----Entry
+[  710.458743]  evregion-0241 ev_address_space_dispa: Handler 00000000f819e6f8 (@00000000572b3f82) Address 000000000000AE08 [SystemIO]
+[  710.462920]  evregion-0288 ev_address_space_dispa: ----Exit- AE_OK
